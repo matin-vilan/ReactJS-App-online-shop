@@ -1,23 +1,23 @@
-import React, { Suspense } from "react";
-import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
+import React, { lazy, Suspense } from "react";
+import { BrowserView, MobileView } from "react-device-detect";
 
-const Mobile = React.lazy(() => {
-  import ("./components/mobile/Mobile.js");
-});
-const Desktop = React.lazy(() => {
-  import ("./components/desktop/Desktop.js");
-});
+const Mobile = lazy(() => import("./components/mobile/Mobile.js"));
+const Desktop = lazy(() => import("./components/desktop/Desktop.js"));
 
 function App() {
   return (
-    <Suspense fallback={<h1>please waite ... </h1>}>
+    <>
       <BrowserView>
-        <Desktop />
+        <Suspense fallback={<div>please waite ... </div>}>
+          <Desktop />
+        </Suspense>
       </BrowserView>
       <MobileView>
-        <Mobile />
+        <Suspense fallback={<div>please waite ... </div>}>
+          <Mobile />
+        </Suspense>
       </MobileView>
-    </Suspense>
+    </>
   );
 }
 
