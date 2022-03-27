@@ -3,7 +3,7 @@ import Home from '../../layouts/Desktop/Home/Home'
 
 function Desktop() {
   return (
-    <div>
+    <div style={{direction:"rtl" , padding:".5rem"}}>
       <Home />
     </div>
   )
