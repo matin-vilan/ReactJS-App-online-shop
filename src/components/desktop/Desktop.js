@@ -1,8 +1,11 @@
 import React from 'react'
+import Home from '../../layouts/Desktop/Home/Home'
 
 function Desktop() {
   return (
-    <div>Desktop</div>
+    <div>
+      <Home />
+    </div>
   )
 }
 

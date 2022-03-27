@@ -7,11 +7,9 @@ const AppComponent = isMobile?lazy(() => import("./components/mobile/Mobile.js")
 function App() {
   return (
     <>
-      
         <Suspense fallback={<LiteCircular />}>
           <AppComponent />
         </Suspense>
-    
     </>
   );
 }
