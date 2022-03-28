@@ -1,5 +1,6 @@
 import React from "react";
 import TopMenuNav from "./TopMenuNav/TopMenuNav";
+import TopMenuSocialMedia from "./TopMenuSocialMedia/TopMenuSocialMedia";
 
 function TopMenu() {
   return (
@@ -16,7 +17,9 @@ function TopMenu() {
             <div className="TopMenuNav col-8">
               <TopMenuNav />
             </div>
-            <div className="TopMenuSocialMedia col-4">SocialMedia</div>
+            <div className="TopMenuSocialMedia col-4">
+              <TopMenuSocialMedia />
+            </div>
           </div>
         </div>
       </div>
