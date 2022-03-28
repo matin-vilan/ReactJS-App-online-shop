@@ -9,7 +9,6 @@ const Header = () => {
     <div>
       <div className="row d-flex flex-column m-0 p-0">
         <TopMenu />
-        {/* <hr /> */}
         <Divider />
         <SignSearch />
         <BottomMenu />

@@ -5,7 +5,7 @@ function SignSearch() {
   return (
     <div>
       <div className="row p-0 m-0 d-flex">
-        <ShoppingItems />
+        <ShoppingItems icon={<i></i>} />
       </div>
     </div>
   );
