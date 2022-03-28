@@ -2,6 +2,7 @@ import React from "react";
 import TopMenuNav from "./TopMenuNav/TopMenuNav";
 import TopMenuSocialMedia from "./TopMenuSocialMedia/TopMenuSocialMedia";
 import "./TopMenu.css";
+import VerticalDivider from "../../../global/Divider/VerticalDivider/VerticalDivider";
 
 function TopMenu() {
   return (
@@ -11,7 +12,7 @@ function TopMenu() {
           <div className="topMenu-title">
             <p>فروشگاه اینترنتی وودمارت</p>
           </div>
-          <span className="verticalMenuDivider"></span>
+          <VerticalDivider />
         </div>
 
         <div className="col-md-10">
