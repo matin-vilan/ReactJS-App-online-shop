@@ -1,0 +1,15 @@
+.icons-container div {
+    margin: 10px;
+    color: #6d6d6d;
+}
+
+.TopMenuNav {
+    display: flex;
+    align-items: center;
+}
+
+.icons-container{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}

@@ -1,9 +1,10 @@
 import React from "react";
+import "./TopMenuSocialMedia.css"
 
 const TopMenuSocialMedia = () => {
   return (
     <div>
-      <div className="d-flex bg-gray">
+      <div className="icons-container d-flex bg-gray">
         <div>
           <i class="bi bi-facebook"></i>
         </div>
