@@ -6,14 +6,14 @@ function TopMenu() {
   return (
     <div>
       <div className="row">
-        <div className="col-md-3">
+        <div className="col-md-3 d-flex align-items-center">
           <div>
             <p>فروشگاه اینترنتی وودمارک</p>
           </div>
         </div>
 
         <div className="col-md-9">
-          <div className="row">
+          <div className="row d-flex justify-content-between">
             <div className="TopMenuNav col-8">
               <TopMenuNav />
             </div>
