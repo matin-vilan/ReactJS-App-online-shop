@@ -1,11 +1,3 @@
-.verticalMenuDivider{
-    height: 1.5rem;
-    position: absolute;
-    width: 1px;
-    top: 10px;
-    background: rgba(185, 185, 185, 0.658);
-    left: 35px;
-}
 
 .topMenu-title{
     font-size: .8rem;

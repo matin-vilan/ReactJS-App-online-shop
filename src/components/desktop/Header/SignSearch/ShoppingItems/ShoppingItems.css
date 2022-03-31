@@ -1,0 +1,13 @@
+.icon i {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: black;
+}
+
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .9rem;
+    color: rgba(85, 85, 85, 0.966);
+}
