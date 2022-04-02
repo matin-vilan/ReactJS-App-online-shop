@@ -1,7 +1,35 @@
 .searchBoxInput{
     width: 20rem;
+    outline: none;
+    border: 1px solid rgba(128, 128, 128, 0.63);
+    height: 2.5rem;
+    border-radius: 0 5px 5px 0;
+    border-left: none;
+    padding: 0 20px;
+}
+
+.searchBoxInput::-webkit-input-placeholder {
+    color: rgba(65, 65, 65, 0.589);
+    font-weight: 400;
 }
 
 .SearchMenuSelectBox{
-    width: 3rem;
+    width: 10rem;
+    outline: none;
+    border: 1px solid rgba(128, 128, 128, 0.63);
+    height: 2.5rem;
+    border-left: none;
+    border-radius: unset;
+}
+
+.searchBoxIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d60644;
+    color: white;
+    width: 3.5rem;
+    font-size: 1.3rem;
+    border-radius: 5px 0 0 5px;
+    height: 2.5rem;
 }

@@ -1,45 +1,50 @@
 import React from "react";
 import VerticalDivider from "../../../global/Divider/VerticalDivider/VerticalDivider";
+import Logo from "./Logo/Logo";
 import SearchBox from "./SearchBox/SearchBox";
 import ShoppingItems from "./ShoppingItems/ShoppingItems";
 
 function SignSearch() {
   return (
-    <div className="d-flex align-items-center">
+    <div className="row d-flex align-items-center justify-content-center p-0 m-0">
        
-      <div className="signUp d-flex">
-        <ShoppingItems icon={<i class="bi bi-bag"></i>} text={"0 تومان"} />
+      <div className="signUp d-flex justify-content-center col-lg-5 col-12">
+        <ShoppingItems icon={<i className="bi bi-bag"></i>} text={"0 تومان"} />
 
         <div
-          class="vr"
+          className="vr"
           style={{ alignSelf: "center", minHeight: "1.5em" }}
         ></div>
 
-        <ShoppingItems icon={<i class="bi bi-heart"></i>} text={"علاقه مندی"} />
+        <ShoppingItems icon={<i className="bi bi-heart"></i>} text={"علاقه مندی"} />
 
         <div
-          class="vr"
+          className="vr"
           style={{ alignSelf: "center", minHeight: "1.5em" }}
         ></div>
 
         <ShoppingItems
-          icon={<i class="bi bi-arrow-left-right"></i>}
+          icon={<i className="bi bi-arrow-left-right"></i>}
           text={"مقایسه"}
         />
 
         <div
-          class="vr"
+          className="vr"
           style={{ alignSelf: "center", minHeight: "1.5em" }}
         ></div>
 
         <ShoppingItems
-          icon={<i class="bi bi-person"></i>}
+          icon={<i className="bi bi-person"></i>}
           text={"ورود / ثبت نام"}
         />
       </div>
 
-      <div className="search">
+      <div className="search d-flex justify-content-center col-lg-5 col-12">
         <SearchBox />
+      </div>
+
+      <div className="logo d-flex justify-content-center col-lg-2 col-12">
+        <Logo />
       </div>
 
     </div>
