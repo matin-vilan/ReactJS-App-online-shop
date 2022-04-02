@@ -1,8 +1,8 @@
 .searchBoxInput{
-    width: 20rem;
+    /* width: 20rem; */
     outline: none;
-    border: 1px solid rgba(128, 128, 128, 0.63);
-    height: 2.5rem;
+    border: 2px solid rgba(199, 199, 199, 0.5);
+    height: 2.8rem;
     border-radius: 0 5px 5px 0;
     border-left: none;
     padding: 0 20px;
@@ -14,10 +14,10 @@
 }
 
 .SearchMenuSelectBox{
-    width: 10rem;
+    /* width: 10rem; */
     outline: none;
-    border: 1px solid rgba(128, 128, 128, 0.63);
-    height: 2.5rem;
+    border: 2px solid rgba(199, 199, 199, 0.5);
+    height: 2.8rem;
     border-left: none;
     border-radius: unset;
 }
@@ -28,8 +28,10 @@
     align-items: center;
     background-color: #d60644;
     color: white;
-    width: 3.5rem;
-    font-size: 1.3rem;
+    /* width: 3.5rem; */
+    font-size: 1rem;
     border-radius: 5px 0 0 5px;
-    height: 2.5rem;
+    height: 2.8rem;
 }
+
+

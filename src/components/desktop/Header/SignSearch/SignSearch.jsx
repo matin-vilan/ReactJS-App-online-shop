@@ -39,11 +39,11 @@ function SignSearch() {
         />
       </div>
 
-      <div className="search d-flex justify-content-center col-lg-5 col-12">
+      <div className="search d-flex justify-content-center col-lg-5 col-8 row mt-lg-0 mt-3">
         <SearchBox />
       </div>
 
-      <div className="logo d-flex justify-content-center col-lg-2 col-12">
+      <div className="logo d-flex justify-content-center col-lg-2 col-12 mt-lg-0 mt-3">
         <Logo />
       </div>
 
