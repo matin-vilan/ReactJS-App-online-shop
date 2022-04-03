@@ -11,7 +11,9 @@ const Header = () => {
         <TopMenu />
         <Divider />
         <SignSearch />
+        <Divider />
         <BottomMenu />
+        <Divider />
       </div>
     </div>
   );
