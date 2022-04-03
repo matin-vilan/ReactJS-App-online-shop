@@ -8,6 +8,7 @@ import store from "./store/store/store";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./layouts/Desktop/assets/Desktop.css"
+import 'typeface-yekan';
 
 
 

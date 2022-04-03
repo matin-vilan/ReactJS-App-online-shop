@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.26.1",
     "bootstrap": "^5.1.3",
     "bootstrap-icons": "^1.8.1",
     "react": "^17.0.2",
@@ -19,6 +20,7 @@
     "redux": "^4.1.2",
     "redux-thunk": "^2.4.1",
     "shabnam-font": "^5.0.0",
+    "typeface-yekan": "^1.0.11",
     "web-vitals": "^0.2.4",
     "workbox-background-sync": "^5.1.4",
     "workbox-broadcast-update": "^5.1.4",
@@ -31,7 +33,8 @@
     "workbox-range-requests": "^5.1.4",
     "workbox-routing": "^5.1.4",
     "workbox-strategies": "^5.1.4",
-    "workbox-streams": "^5.1.4"
+    "workbox-streams": "^5.1.4",
+    "yekan-font": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
