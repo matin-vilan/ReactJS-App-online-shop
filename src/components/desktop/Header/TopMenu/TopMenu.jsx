@@ -12,7 +12,10 @@ function TopMenu() {
           <div className="topMenu-title">
             <p>فروشگاه اینترنتی وودمارت</p>
           </div>
-          <VerticalDivider />
+          <div
+            className="vr me-4"
+            style={{ alignSelf: "center", minHeight: "1.5em" }}
+          ></div>
         </div>
 
         <div className="col-md-10">
