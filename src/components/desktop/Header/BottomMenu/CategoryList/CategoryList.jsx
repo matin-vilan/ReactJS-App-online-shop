@@ -1,7 +1,7 @@
 import React  from "react";
 import {useState} from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import "./CategoryList.module.css";
+import styles from "./CategoryList.module.css";
 import * as Icon from "react-bootstrap-icons";
 
 const CategoryList = () => {
@@ -29,7 +29,7 @@ const CategoryList = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Icon.List style={{ fontSize: "1.5rem" }} />
             <Nav className="ms-auto">
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown"  show={dropDownMenu}>
+              <NavDropdown title="لیست دسته بندی ها" id="basic-nav-dropdown" show={dropDownMenu}>
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
                   Another action
