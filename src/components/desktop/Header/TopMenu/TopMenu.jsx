@@ -8,7 +8,7 @@ function TopMenu() {
   return (
     <div>
       <div className="row">
-        <div className="col-md-2 d-flex align-items-center position-relative">
+        <div className="col-md-2 d-flex justify-content-center align-items-center position-relative">
           <div className="topMenu-title">
             <p>فروشگاه اینترنتی وودمارت</p>
           </div>
