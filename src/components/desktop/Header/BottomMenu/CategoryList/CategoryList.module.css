@@ -17,6 +17,6 @@
 .dropDownList{
     position: absolute;
     top: 2.6rem;
-    background-color: gray;
+    background-color: rgb(255, 255, 255);
     width: 90%;
 }
