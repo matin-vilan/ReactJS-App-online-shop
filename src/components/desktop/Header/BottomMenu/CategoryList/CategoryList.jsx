@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import styles from "./CategoryList.module.css";
 import * as Icon from "react-bootstrap-icons";
+import DropDownList from "./DropDownList/DropDownList";
 
 const CategoryList = () => {
   const [hovered, setHovered] = useState(false);
@@ -18,8 +18,10 @@ const CategoryList = () => {
   const dropDownMenu = hovered ? "show" : "";
 
   return (
-    <>
-      <div className="d-flex align-items-center justify-content-between w-100">
+    <div onMouseEnter={handleMenuHoverIn}
+      onMouseLeave={handleMenuHoverOut} className="w-100">
+      <div className="d-flex align-items-center justify-content-between w-100"
+      >
         <div className="dropdownMenu d-flex justify-content-start align-items-center">
           <div className={styles.icon}>
             <Icon.List />
@@ -30,7 +32,14 @@ const CategoryList = () => {
           <Icon.ChevronDown />
         </div>
       </div>
-    </>
+      <div
+        className={styles.dropDownList}
+      >
+
+        <DropDownList show={dropDownMenu} />
+
+      </div>
+    </div>
   );
 };
 

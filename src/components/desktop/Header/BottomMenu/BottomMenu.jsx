@@ -6,7 +6,7 @@ import MenuList from "./MenuList/MenuList";
 function BottomMenu() {
   return (
     <div className="row d-flex m-0">
-      <div className="categories col-3 d-flex">
+      <div className="categories col-3 d-flex position-relative">
         <CategoryList />
         <div
           className="vr"
