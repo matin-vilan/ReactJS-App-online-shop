@@ -1,0 +1,10 @@
+.discount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #d60644;
+    color:white;
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
