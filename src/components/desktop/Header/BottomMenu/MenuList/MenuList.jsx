@@ -4,12 +4,13 @@ import MenuItem from "./MenuItem/MenuItem";
 import styles from "./MenuList.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
+import Divider from "../../../../global/Divider/Divider";
 
 
 const MenuList = () => {
 
   const dispatch = useDispatch();
-  const menuData = useSelector((state)=>state);
+  const menuData = useSelector((state) => state);
 
   const data = [
     {
@@ -22,18 +23,21 @@ const MenuList = () => {
 
   useEffect(() => {
     dispatch(getMenusRequestServer());
-  }, [])
+  }, []);
 
-  console.log("menudata",menuData);
+  console.log("data" , menuData);
 
   return (
-    <div className="d-flex justify-content-start">
+    <div className="d-flex h-100">
       {data.map((item, index) => {
         return (
-          <MenuItem
-            key={index}
-            text={item.text}
-          />
+          <>
+            <MenuItem
+              key={index}
+              text={item.text}
+            />
+            <div key={index+2} className="hr"></div>
+          </>
         );
       })}
     </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Dropdown } from "react-bootstrap";
+import MenuDropDownList from "./MenuDropDownList/MenuDropDownList";
 import styles from "./MenuItem.module.css";
 
 const MenuItem = ({ text }) => {
@@ -13,26 +14,15 @@ const MenuItem = ({ text }) => {
 
   return (
     <>
-      <Dropdown
-        className="ms-2"
-        show={show}
-        onMouseEnter={activeHandler}
-        onMouseLeave={activeHandler}
-      >
-        <Dropdown.Toggle
-          variant={"none"}
-          className={active ? "text-danger" : ""}
-          id="dropdown-basic"
-        >
-          {text}
-        </Dropdown.Toggle>
-
-        <Dropdown.Menu className={styles.dropDownMenuItem}>
-          <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-          <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>
+      <div className={styles.menuContainer} onMouseEnter={activeHandler} onMouseLeave={activeHandler}>
+        <div className={styles.menuTitle + ' d-flex'}>
+          <p className='p-0 m-0'>{text}</p>
+          <i className="bi bi-chevron-compact-down"></i>
+        </div>
+        <div className={show ? " d-block " +styles.menuDropDownList : " d-none " +styles.menuDropDownList}>
+          <MenuDropDownList />
+        </div>
+      </div>
     </>
   );
 };

@@ -33,7 +33,7 @@ const DropDownList = ({ show }) => {
                 {data.map((item, index) => {
                     return <>
                         <DropDownItem key={index} text={item.text} />
-                        {index !== (data.length - 1) && <Divider />}
+                        {index !== (data.length - 1) && <Divider key={index+2} />}
                     </>
                 })}
             </ul>
