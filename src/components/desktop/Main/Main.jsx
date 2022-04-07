@@ -1,5 +1,7 @@
 import React from 'react'
+import OwlCarouselSlider from './OwlCarouselSlider/OwlCarouselSlider'
 import TopMainSquareImage from './TopMainImages/TopMainSquareImage/TopMainSquareImage'
+
 
 function Main() {
   return (
@@ -11,7 +13,7 @@ function Main() {
             <TopMainSquareImage src={"/assets/images/mainImages/1.jpg"} />
           </div>
           <div className='col-8'>
-            col-8
+            <OwlCarouselSlider />
           </div>
         </div>
 
@@ -23,7 +25,7 @@ function Main() {
           <TopMainSquareImage src={"assets/images/mainImages/3.jpg"} />
           </div>
           <div className='col-4'>
-          <TopMainSquareImage src={"assets/images/mainImages/4.jpg"} />
+          <TopMainSquareImage src={"assets/images/mainImages/4.jpg"}  />
           </div>
         </div>
         

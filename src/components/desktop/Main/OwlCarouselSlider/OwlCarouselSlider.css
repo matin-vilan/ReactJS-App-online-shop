@@ -1,0 +1,45 @@
+/* .carousel-control-prev .carousel-control-prev-icon {
+  font-size: 10rem;
+  background-color: gray;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-control-next .carousel-control-next-icon {
+  font-size: 10rem;
+  background-color: gray;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-indicators{
+        margin-bottom: -.6rem;
+        width: 100%;
+        margin-right: 0;
+}
+
+.carousel-indicators [data-bs-target]{
+        background-color: rgba(61, 61, 61, 0.527);
+        height: 4rem;
+        width: 15rem;
+        margin: 0;
+} */
+
+/* ================================ */
+
+.nextSlideButton , .prevSlideButton{
+  z-index: 10;
+  position:relative;
+  border-radius: 100%;
+  padding: 1rem;
+}
+
+.prevSlideButton{
+
+}

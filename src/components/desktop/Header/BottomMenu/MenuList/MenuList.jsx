@@ -21,12 +21,6 @@ const MenuList = () => {
     },
   ];
 
-  useEffect(() => {
-    dispatch(getMenusRequestServer());
-  }, []);
-
-  console.log("data" , menuData);
-
   return (
     <div className="d-flex h-100">
       {data.map((item, index) => {
