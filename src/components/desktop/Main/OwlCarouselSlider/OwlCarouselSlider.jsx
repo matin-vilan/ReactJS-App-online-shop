@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import "./OwlCarouselSlider.css";
 import SliderImage from './SliderImage/SliderImage';
 
@@ -52,9 +52,9 @@ const OwlCarouselSlider = () => {
     }
 
     return (
-        <div>
-            <div className='slider'>
-                <div className={"sliderImages"}>
+        <>
+            <div className='slider w-100'>
+                <div className={"sliderImages w-100"}>
                     {jsonSlider.map((item, index) => {
                         return <SliderImage src={item.src} alt={item.alt} caption={item.caption} id={item.id} key={index}
                             addClass={slideIndex === index + 1 ? " active" : ""}
@@ -62,11 +62,15 @@ const OwlCarouselSlider = () => {
                     })}
                 </div>
                 <div className="buttonContainer">
-                    <button className='nextSlideButton'>next</button>
-                    <button className='prevSlideButton'>prev</button>
+                    <button onClick={nextSlide} className='nextSlideButton'>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                    <button onClick={prevSlide} className='prevSlideButton'>
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

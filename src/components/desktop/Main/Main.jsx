@@ -1,11 +1,11 @@
 import React from 'react'
 import OwlCarouselSlider from './OwlCarouselSlider/OwlCarouselSlider'
 import TopMainSquareImage from './TopMainImages/TopMainSquareImage/TopMainSquareImage'
-
+import styles from "./Main.module.css";
 
 function Main() {
   return (
-    <div className={"mainLayout"}>
+    <div className={styles.mainLayout + " container"}>
       <div className='row p-0 m-0 my-5'>
 
         <div className='row p-0 m-0 d-flex col-12 mb-4'>

@@ -5,7 +5,7 @@ const SliderImage = ({src , caption , alt , id , addClass}) => {
 
     return (
         <>
-            <div className={'sliderImage position-absolute'}>
+            <div className={'sliderImage position-absolute w-100'}>
                 <img src={src} className={addClass + '  img-fluid'} alt={alt} />
             </div>
         </>

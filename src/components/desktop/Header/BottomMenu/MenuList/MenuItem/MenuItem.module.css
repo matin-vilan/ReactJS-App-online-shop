@@ -1,25 +1,25 @@
-.dropDownMenuItem{
+.dropDownMenuItem {
     transition: .5s all ease;
     margin-top: 8px;
     right: 0px!important;
 }
 
-.menuContainer{
+.menuContainer {
     height: 100%;
     margin-left: 2rem;
     position: relative;
-    display:flex;
+    display: flex;
     align-items: center;
 }
 
-.menuTitle p{
+.menuTitle p {
     margin-left: .7rem!important;
 }
 
-.menuDropDownList{
+.menuDropDownList {
     position: absolute;
     top: 2.6rem;
-    background-color: rgba(255, 255, 255, 0.836);
-    width:200%;
-    height:auto;
+    background-color: rgb(255, 255, 255);
+    width: 200%;
+    height: auto;
 }

@@ -7,9 +7,9 @@ const MenuDropDownList = () => {
     return (
         <ul className={styles.MenuDropDownItemContainer}>
             <MenuDropDownItem />
-            <Divider />
+            {/* <Divider /> */}
             <MenuDropDownItem />
-            <Divider />
+            {/* <Divider /> */}
             <MenuDropDownItem />
         </ul>
     );

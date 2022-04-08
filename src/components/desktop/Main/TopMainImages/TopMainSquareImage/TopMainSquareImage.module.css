@@ -1,3 +1,9 @@
 .topMainSquareImage img {
     border-radius: 1.5rem;
 }
+
+.topMainSquareImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

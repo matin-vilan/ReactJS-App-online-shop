@@ -22,7 +22,7 @@ const MenuList = () => {
   ];
 
   return (
-    <div className="d-flex h-100">
+    <div className={styles.menuList+"menuList d-flex h-100"}>
       {data.map((item, index) => {
         return (
           <>
@@ -30,7 +30,7 @@ const MenuList = () => {
               key={index}
               text={item.text}
             />
-            <div key={index+2} className="hr"></div>
+            {/* <div key={index+2} className="hr"></div> */}
           </>
         );
       })}
