@@ -5,7 +5,8 @@ import styles from "./Main.module.css";
 
 function Main() {
   return (
-    <div className={styles.mainLayout + " container"}>
+    <div className='row m-0 p-0'>
+    <section className={styles.mainLayout + " container col-12"}>
       <div className='row p-0 m-0 my-5'>
 
         <div className='row p-0 m-0 d-flex col-12 mb-4'>
@@ -30,6 +31,13 @@ function Main() {
         </div>
         
       </div>
+    </section>
+
+    <section className={styles.mainSpecialOffers + " col-12"}>
+      <div className={'specialOffersContainer row m-0 p-0'}>
+        
+      </div>
+    </section>
     </div>
   )
 }
