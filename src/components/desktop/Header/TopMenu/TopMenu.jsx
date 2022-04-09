@@ -6,11 +6,11 @@ import VerticalDivider from "../../../global/Divider/VerticalDivider/VerticalDiv
 
 function TopMenu() {
   return (
-    <div>
+    <>
       <div className="row p-0 m-0">
         <div className="col-md-2 d-flex justify-content-center align-items-center position-relative">
           <div className="topMenu-title">
-            <p>فروشگاه اینترنتی وودمارت</p>
+            <p className="pointer">فروشگاه اینترنتی وودمارت</p>
           </div>
           <div
             className="vr me-4"
@@ -29,7 +29,7 @@ function TopMenu() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

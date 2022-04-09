@@ -1,7 +1,14 @@
-.menuDropDownItem{
+.menuDropDownItem {
     margin: .5rem 0;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    width:100%;
+    width: 100%;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.menuDropDownItem:hover {
+    background-color: aliceblue;
+    transition: all .2s ease;
 }

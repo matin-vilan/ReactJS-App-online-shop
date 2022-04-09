@@ -6,7 +6,7 @@ import TopMenu from "./TopMenu/TopMenu";
 
 const Header = () => {
   return (
-    <div>
+    <>
       <div className="row d-flex flex-column m-0 p-0">
         <TopMenu />
         <Divider />
@@ -15,7 +15,7 @@ const Header = () => {
         <BottomMenu />
         <Divider />
       </div>
-    </div>
+    </>
   );
 };
 

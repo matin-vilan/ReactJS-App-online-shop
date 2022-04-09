@@ -6,9 +6,9 @@ import ShoppingItems from "./ShoppingItems/ShoppingItems";
 
 function SignSearch() {
   return (
-    <div className="row d-flex align-items-center justify-content-center p-0 my-3">
+    <div className="row d-flex align-items-center justify-content-center p-0 my-3 m-0">
        
-      <div className="signUp d-flex justify-content-center col-lg-5 col-12">
+      <div className="signUp d-flex justify-content-start col-lg-5 col-12">
         <ShoppingItems icon={<i className="bi bi-bag"></i>} text={"0 تومان"} />
 
         <div
@@ -39,7 +39,7 @@ function SignSearch() {
         />
       </div>
 
-      <div className="search d-flex justify-content-center col-lg-5 col-8 row mt-lg-0 mt-3">
+      <div className="search d-flex justify-content-center col-lg-5 col-8 row m-0 p-0 mt-lg-0 mt-3">
         <SearchBox />
       </div>
 

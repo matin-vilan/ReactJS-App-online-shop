@@ -4,10 +4,15 @@
     color: black;
 }
 
-.text{
+.text {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: .9rem;
     color: rgba(85, 85, 85, 0.966);
+}
+
+.shoppingItem:hover .shoppingItemContainer .text,
+.shoppingItem:hover .shoppingItemContainer .icon i {
+    color: rgba(52, 52, 52, 0.396);
 }

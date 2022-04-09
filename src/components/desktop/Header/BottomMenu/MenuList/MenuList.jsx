@@ -5,6 +5,7 @@ import styles from "./MenuList.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import Divider from "../../../../global/Divider/Divider";
+import { axiosInstanceApiMenu } from "../../../../../utils/axiosInstance/axiosInstance";
 
 
 const MenuList = () => {
@@ -21,8 +22,12 @@ const MenuList = () => {
     },
   ];
 
+  useEffect(()=>{
+    axiosInstanceApiMenu().get().then().catch()
+  })
+
   return (
-    <div className={styles.menuList+"menuList d-flex h-100"}>
+    <div className={styles.menuList+" pointer d-flex h-100"}>
       {data.map((item, index) => {
         return (
           <>

@@ -1,13 +1,14 @@
-.dropDownUl{
+.dropDownUl {
     padding: 0;
     border: 1px solid rgb(211, 211, 211);
+    border-bottom: none;
     border-top: none;
 }
 
-.dropDownShow{
+.dropDownShow {
     display: block!important;
 }
 
-.dropDownHide{
+.dropDownHide {
     display: none!important;
 }

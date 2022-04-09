@@ -63,10 +63,10 @@ const OwlCarouselSlider = () => {
                 </div>
                 <div className="buttonContainer">
                     <button onClick={nextSlide} className='nextSlideButton'>
-                        <i class="bi bi-chevron-right"></i>
+                        <i className="bi bi-chevron-right"></i>
                     </button>
                     <button onClick={prevSlide} className='prevSlideButton'>
-                        <i class="bi bi-chevron-left"></i>
+                        <i className="bi bi-chevron-left"></i>
                     </button>
                 </div>
             </div>

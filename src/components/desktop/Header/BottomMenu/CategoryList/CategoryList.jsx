@@ -18,10 +18,12 @@ const CategoryList = () => {
   const dropDownMenu = hovered ? "show" : "";
 
   return (
-    <div onMouseEnter={handleMenuHoverIn}
-      onMouseLeave={handleMenuHoverOut} className="w-100">
-      <div className="d-flex align-items-center justify-content-between w-100"
-      >
+    <div
+      onMouseEnter={handleMenuHoverIn}
+      onMouseLeave={handleMenuHoverOut}
+      className="w-100"
+    >
+      <div className="d-flex pointer align-items-center justify-content-between w-100">
         <div className="dropdownMenu d-flex justify-content-start align-items-center">
           <div className={styles.icon}>
             <Icon.List />
@@ -32,12 +34,8 @@ const CategoryList = () => {
           <Icon.ChevronDown />
         </div>
       </div>
-      <div
-        className={styles.dropDownList}
-      >
-
+      <div className={styles.dropDownList}>
         <DropDownList show={dropDownMenu} />
-
       </div>
     </div>
   );

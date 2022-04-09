@@ -3,12 +3,18 @@
     color: #6d6d6d;
 }
 
+.icons-container div i:hover {
+    color: #c40538;
+    transition: all .4s ease;
+    cursor: pointer;
+}
+
 .TopMenuNav {
     display: flex;
     align-items: center;
 }
 
-.icons-container{
+.icons-container {
     display: flex;
     justify-content: end;
     align-items: center;

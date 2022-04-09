@@ -1,9 +1,9 @@
 import React from 'react';
 import "./NavItem.css"
 
-function NavItem() {
+function NavItem({text}) {
   return (
-    <div className='TopMenuNavItem'>مجله</div>
+    <div className='TopMenuNavItem'>{text}</div>
   )
 }
 
