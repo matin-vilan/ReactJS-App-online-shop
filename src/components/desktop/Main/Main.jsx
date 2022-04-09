@@ -2,6 +2,7 @@ import React from 'react'
 import OwlCarouselSlider from './OwlCarouselSlider/OwlCarouselSlider'
 import TopMainSquareImage from './TopMainImages/TopMainSquareImage/TopMainSquareImage'
 import styles from "./Main.module.css";
+import SpecialOffersLogo from './SpecialOffers/SpecialOffersLogo/SpecialOffersLogo';
 
 function Main() {
   return (
@@ -34,8 +35,13 @@ function Main() {
     </section>
 
     <section className={styles.mainSpecialOffers + " col-12"}>
-      <div className={'specialOffersContainer row m-0 p-0'}>
-        
+      <div className={styles.specialOffersContainer+' row m-0 p-0 pt-4'}>
+        <div className='specialOfferLogo col-2 pe-5'>
+          <SpecialOffersLogo />
+        </div>
+        <div className='specialOfferLogo col-10'>
+          items
+        </div>
       </div>
     </section>
     </div>
