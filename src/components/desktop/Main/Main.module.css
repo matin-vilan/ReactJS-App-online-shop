@@ -1,12 +1,13 @@
 .mainSpecialOffers {
     background-color: #EF394E;
     width: 100%;
-    height: 27rem;
+    height: auto;
 }
 
 
 /* =================== speical offers =================== */
 
 .specialOffersContainer {
-    height: 100%;
+    /* height: 100%; */
+    overflow-x: scroll;
 }
