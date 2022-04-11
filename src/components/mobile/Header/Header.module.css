@@ -1,0 +1,8 @@
+.headerContainer{
+    direction: rtl;
+}
+
+.signMenu i{
+    margin: 0 1rem;
+    font-size: 1.5rem;
+}

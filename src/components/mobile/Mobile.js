@@ -1,8 +1,11 @@
 import React from 'react'
+import Home from '../../layouts/Mobile/Home/Home'
 
 function Mobile() {
   return (
-    <div>Mobile</div>
+    <div className='mobile'>
+      <Home />
+    </div>
   )
 }
 
