@@ -7,8 +7,8 @@ import VerticalDivider from "../../../global/Divider/VerticalDivider/VerticalDiv
 function TopMenu() {
   return (
     <>
-      <div className="row p-0 m-0">
-        <div className="col-md-2 d-flex justify-content-center align-items-center position-relative">
+      <div className="row p-0 m-0 ">
+        <div className="menuContainer col-md-2 d-flex justify-content-center align-items-center position-relative">
           <div className="topMenu-title">
             <p className="pointer">فروشگاه اینترنتی وودمارت</p>
           </div>
@@ -18,8 +18,8 @@ function TopMenu() {
           ></div>
         </div>
 
-        <div className="col-md-10">
-          <div className="row d-flex justify-content-between">
+        <div className="col-10">
+          <div className="row d-flex justify-content-between align-items-center">
             <div className="TopMenuNav col-8">
               <TopMenuNav />
             </div>

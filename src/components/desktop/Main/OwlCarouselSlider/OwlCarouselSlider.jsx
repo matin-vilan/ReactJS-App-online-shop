@@ -53,7 +53,7 @@ const OwlCarouselSlider = () => {
 
     return (
         <>
-            <div className='slider w-100'>
+            <div className='slider w-100 align-items-stretch'>
                 <div className={"sliderImages w-100"}>
                     {jsonSlider.map((item, index) => {
                         return <SliderImage src={item.src} alt={item.alt} caption={item.caption} id={item.id} key={index}
