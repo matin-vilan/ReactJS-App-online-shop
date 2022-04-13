@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
@@ -12,9 +12,9 @@ import 'typeface-yekan';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Provider store={store}> */}
+    <Provider store={store}>
         <App />
-    {/* </Provider> */}
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

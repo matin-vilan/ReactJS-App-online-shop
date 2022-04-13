@@ -61,7 +61,7 @@ const OwlCarouselSlider = () => {
                         />
                     })}
                 </div>
-                <div className="buttonContainer">
+                <div className="buttonContainer" style={{direction:"rtl"}}>
                     <button onClick={nextSlide} className='nextSlideButton'>
                         <i className="bi bi-chevron-right"></i>
                     </button>
