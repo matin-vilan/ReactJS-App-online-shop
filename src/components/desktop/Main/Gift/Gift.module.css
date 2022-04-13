@@ -1,0 +1,35 @@
+.giftContainer{
+    padding: 2rem;
+    direction: rtl;
+}
+
+.giftText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.giftDivider{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redLine{
+    position: absolute;
+    width: 12rem;
+    max-width: 12rem;
+    height: 2px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+}
+
+.giftBoxSwiper{
+    background-color: red;
+    width: 100%;
+    height: 12rem;
+    max-height: 12rem;
+}

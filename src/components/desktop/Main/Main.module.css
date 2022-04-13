@@ -1,4 +1,6 @@
-.mainLayout {}
+.main{
+    background-color: #f6f6f6;
+}
 
 .mainSpecialOffers {
     background-color: #EF394E;
@@ -13,4 +15,13 @@
 .specialOffersContainer {
     /* height: 100%; */
     overflow-x: scroll;
+}
+
+
+/* =================== gift =================== */
+.gift{
+    margin: 2rem 0;
+    /* background-color: blue; */
+    height: 25rem;
+    max-height: 25rem;
 }

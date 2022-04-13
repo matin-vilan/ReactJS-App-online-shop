@@ -4,12 +4,12 @@ import TopMainSquareImage from "./TopMainImages/TopMainSquareImage/TopMainSquare
 import styles from "./Main.module.css";
 import SpecialOffersLogo from "./SpecialOffers/SpecialOffersLogo/SpecialOffersLogo";
 import Swipper from "./SpecialOffers/SpecialOffersLogo/Swipper/Swipper";
-import { Gift } from "react-bootstrap-icons";
+import Gift from './Gift/Gift';
 
 function Main() {
 
   return (
-    <div className="row m-0 p-0">
+    <div className={styles.main+" row m-0 p-0"}>
       <section className={styles.mainLayout + " col-12"}>
         <div className="row p-0 m-0 my-5">
           <div className="row p-0 m-0 d-flex col-12 mb-md-4 mb-0 align-items-stretch">
