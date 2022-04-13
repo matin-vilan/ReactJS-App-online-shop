@@ -1,9 +1,10 @@
 .sliderMenu{
-    width: 50%;
+    width: 100%;
     height: 100%;
     background-color: rgba(52, 52, 52, 0.231);
     display: flex;
     justify-content: start;
+    direction: rtl;
     top: 0;
     right: 0;
     min-height: 100%;
@@ -13,7 +14,8 @@
 
 .productSearching{
     width: 100%;
-    height: 14%;
+    min-height: 8%;
+    max-height: 15%;
     background-color: #fff;
 }
 
@@ -55,4 +57,8 @@
 .tabsAndContent{
     width: 100%;
     height: 100%;
+}
+
+.offCancvasStyle{
+    width: 10%;
 }

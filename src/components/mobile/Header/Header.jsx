@@ -1,17 +1,30 @@
 import React, { useState } from "react";
 import styles from "./Header.module.css";
 import SliderMenu from "./ListIconMenu/SliderMenu";
+import { showSliderMenu } from "../../../store/actions/actions";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 function Header() {
-  const [show, setShow] = useState(false);
+  const dispatch = useDispatch();
 
-  const handleSliderMenu = () => {
-    setShow(!show);
+  const showSlider = useSelector((state) => state.showSlider);
+
+  const handleShow = () => {
+    dispatch(showSliderMenu(true));
+    console.log("clicked", showSlider, showSliderMenu(true));
   };
+
+  // const [show, setShow] = useState(false);
+
+  // const handleSliderMenu = () => {
+  //   setShow(!show);
+  // };
 
   return (
     <div className="header">
       <div
+        id="headerContainer"
         className={
           styles.headerContainer +
           " row m-0 p-0 px-2 my-4 d-flex justify-content-around"
@@ -19,9 +32,8 @@ function Header() {
       >
         <div
           className="menuIcon col-4 d-flex justify-content-start align-items-center fs-4 pointer"
-          onClick={handleSliderMenu}
         >
-          <i className="bi bi-list"></i>
+          <SliderMenu />
         </div>
         <div className="logo col-4 d-flex justify-content-center align-items-center poointer">
           <img
@@ -36,10 +48,9 @@ function Header() {
             " col-4 d-flex justify-content-end align-items-center fs-4"
           }
         >
-          <i class="bi bi-person pointer"></i>
-          <i class="bi bi-bag pointer"></i>
+          <i className="bi bi-person pointer"></i>
+          <i className="bi bi-bag pointer"></i>
         </div>
-        <SliderMenu />
       </div>
     </div>
   );

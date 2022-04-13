@@ -1,0 +1,1 @@
+export const SHOW_SLIDER_MENU = "SHOW_SLIDER_MENU";
