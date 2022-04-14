@@ -19,7 +19,7 @@ const SliderMenu = () => {
   return (
     <>
       <div className="menuIconContainer" onClick={handleShow}>
-        <i class="bi bi-list"></i>
+        <i className="bi bi-list"></i>
       </div>
       <Offcanvas
         className={"offcanvasStyle"}

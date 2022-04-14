@@ -7,9 +7,7 @@ import axios from "axios";
 import Divider from "../../../../global/Divider/Divider";
 import { axiosInstanceApiMenu } from "../../../../../utils/axiosInstance/axiosInstance";
 
-
 const MenuList = () => {
-
   const dispatch = useDispatch();
   const menuData = useSelector((state) => state);
 
@@ -22,22 +20,14 @@ const MenuList = () => {
     },
   ];
 
-  useEffect(()=>{
-    axiosInstanceApiMenu().get().then().catch()
-  })
+  useEffect(() => {
+    axiosInstanceApiMenu().get().then().catch();
+  });
 
   return (
-    <div className={styles.menuList+" pointer d-flex h-100"}>
+    <div className={styles.menuList + " pointer d-flex h-100"}>
       {data.map((item, index) => {
-        return (
-          <>
-            <MenuItem
-              key={index}
-              text={item.text}
-            />
-            {/* <div key={index+2} className="hr"></div> */}
-          </>
-        );
+        return <MenuItem key={index} text={item.text} />;
       })}
     </div>
   );

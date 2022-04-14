@@ -1,0 +1,45 @@
+.offerscategory{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.4rem;
+}
+.offerscategory p{
+    margin: 0 .7rem;
+    cursor: pointer;
+}
+
+.offerscategory p:hover{
+    color: red;
+}
+
+.offerscategory p:active{
+    color: red;
+}
+
+.swiperContinerOffers .swiper{
+    position: unset!important;
+}
+
+.swiperContinerOffers .swiper .swiper-pagination{
+    bottom: -40px!important;
+}
+
+
+@media screen and (max-width: 576px) {
+    .offerscategory p{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .offerscategory p{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .offerscategory p{
+        font-size: 1.6rem;
+    }
+}

@@ -31,10 +31,10 @@ const DropDownList = ({ show }) => {
         <div className={show ? styles.dropDownShow : styles.dropDownHide}>
             <ul className={styles.dropDownUl}>
                 {data.map((item, index) => {
-                    return <>
+                    return (<div key={index}>
                         <DropDownItem key={index} text={item.text} />
                         {index !== (data.length - 1) && <Divider key={index+2} />}
-                    </>
+                    </div>);
                 })}
             </ul>
         </div>

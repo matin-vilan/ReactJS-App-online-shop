@@ -1,0 +1,15 @@
+.offersItem{
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+
+.offersItemImage img{
+    border-radius: 1rem;
+}
+
+.swiper-button-prev , .swiper-button-next{
+    top: 0!important;
+}

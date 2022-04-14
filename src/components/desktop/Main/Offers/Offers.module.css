@@ -1,0 +1,57 @@
+.offersContainer{
+    width: 100%;
+    height: 100%;
+}
+
+.offersTitle{
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.offersTitle p{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    flex-direction: column;
+}
+
+.redLine{
+    width: 18rem;
+    max-width: 18rem;
+    height: 2px;
+    position: absolute;
+    background-color: red;
+    bottom: 0;
+    right: 0;
+}
+
+.offerscategory{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.offerscategory p{
+    margin: 0 .7rem!important;
+    cursor: pointer;
+}
+
+.offerscategory p:hover{
+    color: red;
+}
+
+.offersItemsContainer{
+    margin: 1rem 0;
+    position: relative!important;
+}
+
+.titleContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleContainer div i{
+    font-size: 2rem;
+}

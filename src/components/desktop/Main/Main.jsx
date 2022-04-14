@@ -4,7 +4,8 @@ import TopMainSquareImage from "./TopMainImages/TopMainSquareImage/TopMainSquare
 import styles from "./Main.module.css";
 import SpecialOffersLogo from "./SpecialOffers/SpecialOffersLogo/SpecialOffersLogo";
 import Swipper from "./SpecialOffers/SpecialOffersLogo/Swipper/Swipper";
-import Gift from './Gift/Gift';
+import Offers from "./Offers/Offers";
+
 
 function Main() {
 
@@ -52,8 +53,8 @@ function Main() {
         </div>
       </section>
 
-      <section className={styles.gift + " col-12"}>
-        <Gift />
+      <section className={styles.dayOffers + " col-12"}>
+        <Offers />
       </section>
     </div>
   );
