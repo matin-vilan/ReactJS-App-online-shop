@@ -12,19 +12,22 @@ import { useMediaQuery } from "../../../../../hooks/useMediaQuery";
 
 const OffersSwiper = () => {
   const [items, setItems] = useState(null);
+  const isMini = useMediaQuery("(max-width:576px)");
   const isMobile = useMediaQuery("(max-width:768px)");
   const isTablet = useMediaQuery("(min-width:768px)");
   const isDesktop = useMediaQuery("(min-width:977px)");
 
   useEffect(() => {
-      if (isMobile) {
+    if (isMini) {
       setItems(2);
     } else if (isTablet) {
-      setItems(3);
+      setItems(6);
     } else if (isDesktop) {
-      setItems(4);
+      setItems(8);
+    } else if (isMobile) {
+      setItems(3);
     }
-  }, [isMobile, isTablet, isDesktop]);
+  }, [isMobile, isTablet, isDesktop, isMini]);
 
   const swiperCategories = [
     {
@@ -42,6 +45,36 @@ const OffersSwiper = () => {
   ];
 
   const swiperSkinCare = [
+    {
+      src: "/assets/images/mainImages/dayOffers/comeon-cream-foot.jpg",
+      text: "شوینده صورت کامان",
+      small: "مناسب پوست خشک",
+      price: "۳۵۰۰۰",
+    },
+    {
+      src: "/assets/images/mainImages/dayOffers/comoen-sensetive-water-bomb.jpg",
+      text: "شوینده صورت کامان",
+      small: "مناسب پوست خشک",
+      price: "۳۵۰۰۰",
+    },
+    {
+      src: "/assets/images/mainImages/dayOffers/comoen-water-bomb-.jpg",
+      text: "شوینده صورت کامان",
+      small: "مناسب پوست خشک",
+      price: "۳۵۰۰۰",
+    },
+    {
+      src: "/assets/images/mainImages/dayOffers/comeon-cream-foot.jpg",
+      text: "شوینده صورت کامان",
+      small: "مناسب پوست خشک",
+      price: "۳۵۰۰۰",
+    },
+    {
+      src: "/assets/images/mainImages/dayOffers/comoen-sensetive-water-bomb.jpg",
+      text: "شوینده صورت کامان",
+      small: "مناسب پوست خشک",
+      price: "۳۵۰۰۰",
+    },
     {
       src: "/assets/images/mainImages/dayOffers/comeon-cream-foot.jpg",
       text: "شوینده صورت کامان",
@@ -101,7 +134,7 @@ const OffersSwiper = () => {
 
   return (
     <>
-      <div className={"offerscategory"}>
+      <div className={"offerscategory my-5"}>
         {swiperCategories.map((item, index) => {
           return (
             <p
@@ -117,7 +150,7 @@ const OffersSwiper = () => {
       <div className="swiperContinerOffers">
         <Swiper
           modules={[Navigation, Pagination]}
-          spaceBetween={10}
+          spaceBetween={isTablet ? 30 : 10}
           slidesPerView={items}
           navigation
           pagination={{ clickable: true }}

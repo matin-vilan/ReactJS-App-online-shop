@@ -5,6 +5,7 @@ import styles from "./Main.module.css";
 import SpecialOffersLogo from "./SpecialOffers/SpecialOffersLogo/SpecialOffersLogo";
 import Swipper from "./SpecialOffers/SpecialOffersLogo/Swipper/Swipper";
 import Offers from "./Offers/Offers";
+import Products from './Products/Products';
 
 
 function Main() {
@@ -56,6 +57,11 @@ function Main() {
       <section className={styles.dayOffers + " col-12"}>
         <Offers />
       </section>
+
+      <section className={styles.Products + " col-12"}>
+        <Products />
+      </section>
+
     </div>
   );
 }
