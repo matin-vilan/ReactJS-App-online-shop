@@ -1,0 +1,7 @@
+.stickyFooter{
+    position: sticky;
+    bottom: 0;
+    background-color: #fff;
+    box-shadow: 1rem 1rem 1rem 1rem #28282854;
+    z-index: 10;
+}

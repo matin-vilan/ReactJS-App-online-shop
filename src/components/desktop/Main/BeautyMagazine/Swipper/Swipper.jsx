@@ -83,8 +83,9 @@ const Swipper = () => {
     >
       {beutyItemsJson.map((item, index) => {
         return (
-          <SwiperSlide>
+          <SwiperSlide key={index}>
             <BeautyMagazineItem
+            key={index+1}
               src={item.src}
               text={item.text}
               date={item.date}

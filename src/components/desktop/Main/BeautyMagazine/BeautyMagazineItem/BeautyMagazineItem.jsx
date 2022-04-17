@@ -16,8 +16,8 @@ const BeautyMagazineItem = ({text,src,badge,title,date}) => {
               <div className={styles.contentTitle}>{title}</div>
               <div className={styles.contentShare +" text-muted"}>
                 <div className='admin'><span>admin</span></div>
-                <div className='commentIcon mx-4'><i class="bi bi-chat-left"></i></div>
-                <div className='shareIcon'><i class="bi bi-share"></i></div>
+                <div className='commentIcon mx-4'><i className="bi bi-chat-left"></i></div>
+                <div className='shareIcon'><i className="bi bi-share"></i></div>
               </div>
               <div className={styles.contentText +" text-muted"}><span>{text + " ..."}</span></div>
               <div className={styles.moreContent +" text-muted"}>ادامه مطلب</div>

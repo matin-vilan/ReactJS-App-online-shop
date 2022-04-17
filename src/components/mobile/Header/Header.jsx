@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Header.module.css";
 import SliderMenu from "./ListIconMenu/SliderMenu";
 import { showSliderMenu } from "../../../store/actions/actions";
@@ -22,12 +22,12 @@ function Header() {
   // };
 
   return (
-    <div className="header">
+    <div className={styles.header}>
       <div
         id="headerContainer"
         className={
           styles.headerContainer +
-          " row m-0 p-0 px-2 my-4 d-flex justify-content-around"
+          " row m-0 p-0 px-2 d-flex justify-content-around"
         }
       >
         <div

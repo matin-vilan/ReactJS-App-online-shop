@@ -1,0 +1,26 @@
+.StickyFooterItem{
+    padding: 0;
+    cursor: pointer;
+}
+
+.StickyFooterItem:active{
+    background-color: red;
+    color: #fff;
+}
+
+.StickyFooterItemContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.stickyFooterIcon i{
+    font-size: 1.5rem;
+}
+
+.stickyFooterItem p{
+    font-size: 1rem;
+    font-weight: 900;
+}
+

@@ -64,7 +64,7 @@ function Main() {
         <BestSellingProducts />
       </section>
 
-      <section className={styles.lastDiscount + " col-12 my-3"}>
+      <section className={styles.lastDiscount + " col-12 my-3 m-0 p-0"}>
         <LastDiscount />
       </section>
 
