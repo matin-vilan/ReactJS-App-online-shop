@@ -1,0 +1,6 @@
+/* =================== speical offers =================== */
+
+.specialOffersContainer {
+    /* height: 100%; */
+    overflow-x: scroll;
+}

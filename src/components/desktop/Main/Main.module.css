@@ -10,19 +10,32 @@
 }
 
 
-/* =================== speical offers =================== */
-
-.specialOffersContainer {
-    /* height: 100%; */
-    overflow-x: scroll;
-}
-
 
 /* =================== gift =================== */
 .dayOffers{
-    margin: 2rem 0;
+    margin: 1rem 0;
     /* background-color: blue; */
-    height: 45rem;
-    max-height: 45rem;
+    height: 100%;
+    max-height: 100%;
     direction: rtl;
 }
+
+.Products{
+    margin: 3rem 0;
+}
+
+.mainSpecialSuperMarketOffers{
+    background-color: #23A455;
+    width: 100%;
+    height: auto;
+    direction: rtl;
+}
+
+.beautyMagazine{
+    background-color: #fff;
+}
+
+.BestSellingProducts{
+    
+}
+

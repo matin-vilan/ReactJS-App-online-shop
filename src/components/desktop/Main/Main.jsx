@@ -2,10 +2,13 @@ import React from "react";
 import OwlCarouselSlider from "./OwlCarouselSlider/OwlCarouselSlider";
 import TopMainSquareImage from "./TopMainImages/TopMainSquareImage/TopMainSquareImage";
 import styles from "./Main.module.css";
-import SpecialOffersLogo from "./SpecialOffers/SpecialOffersLogo/SpecialOffersLogo";
-import Swipper from "./SpecialOffers/SpecialOffersLogo/Swipper/Swipper";
 import Offers from "./Offers/Offers";
 import Products from './Products/Products';
+import SpecialOffers from "./SpecialOffers/SpecialOffers";
+import SpecialOffersSuperMarket from './SpecialOffersSuperMarket/SpecialOffersSuperMarket';
+import BeautyMagazine from "./BeautyMagazine/BeautyMagazine";
+import BestSellingProducts from "./BestSellingProducts/BestSellingProducts";
+import LastDiscount from './LastDiscount/LastDiscount';
 
 
 function Main() {
@@ -38,20 +41,7 @@ function Main() {
       </section>
 
       <section className={styles.mainSpecialOffers + " col-12"}>
-        <div className={styles.specialOffersContainer + " row m-0 p-0 py-4"}>
-          <div className="specialOfferLogo col-md-3 ps-5 pe-2 d-none d-md-block">
-            <SpecialOffersLogo />
-          </div>
-          <div
-            className={
-              styles.specialOfferTimer + " col-12 col-md-9 row m-0 p-0 container"
-            }
-          >
-            <div className="swiperSpecialTimer">
-              <Swipper />
-            </div>
-          </div>
-        </div>
+        <SpecialOffers />
       </section>
 
       <section className={styles.dayOffers + " col-12"}>
@@ -61,6 +51,25 @@ function Main() {
       <section className={styles.Products + " col-12"}>
         <Products />
       </section>
+
+      <section className={styles.mainSpecialSuperMarketOffers + " col-12"}>
+        <SpecialOffersSuperMarket />
+      </section>
+
+      <section className={styles.beautyMagazine + " col-12 my-3"}>
+        <BeautyMagazine />
+      </section>
+
+      <section className={styles.BestSellingProducts + " col-12 my-3"}>
+        <BestSellingProducts />
+      </section>
+
+      <section className={styles.lastDiscount + " col-12 my-3"}>
+        <LastDiscount />
+      </section>
+
+      
+
 
     </div>
   );

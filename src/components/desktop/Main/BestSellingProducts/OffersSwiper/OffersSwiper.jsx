@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Swiper } from "swiper/react";
 import { SwiperSlide } from "swiper/react";
-import OffersItem from "../OffersItem/OffersItem";
 import { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./OffersSwiper.css";
-import "./OffersSwiper.css";
 import { useMediaQuery } from "../../../../../hooks/useMediaQuery";
+import OffersItem from '../../Offers/OffersItem/OffersItem';
 
 const OffersSwiper = () => {
   const [items, setItems] = useState(null);
@@ -28,21 +27,6 @@ const OffersSwiper = () => {
       setItems(6);
     } 
   }, [isMobile, isTablet, isDesktop, isMini]);
-
-  const swiperCategories = [
-    {
-      text: "مراقبت پوست",
-    },
-    {
-      text: "آرایشی",
-    },
-    {
-      text: "مراقبت مو",
-    },
-    {
-      text: "عطر",
-    },
-  ];
 
   const swiperSkinCare = [
     {
@@ -134,20 +118,7 @@ const OffersSwiper = () => {
 
   return (
     <>
-      <div className={"offerscategory my-5"}>
-        {swiperCategories.map((item, index) => {
-          return (
-            <p
-              className=" mx-md-5 mx-2"
-              key={index}
-              onClick={() => handleClick(index)}
-            >
-              {item.text}
-            </p>
-          );
-        })}
-      </div>
-      <div className="swiperContinerOffers">
+      <div className="swiperContinerOffers position-relative">
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={isTablet ? 20 : 10}
@@ -156,10 +127,6 @@ const OffersSwiper = () => {
           pagination={{ clickable: true }}
           slidesPerGroup={2}
         >
-          {/* <div>
-          <i onClick={swiper.slideNext(100,Navigation)} className="bi bi-chevron-right swiper-button-next"></i>
-          <i onClick={swiper.slidePrev(100,Navigation)} className="bi bi-chevron-left swiper-button-prev"></i>
-        </div> */}
           {data?.map((item, index) => {
             return (
               <SwiperSlide key={index}>

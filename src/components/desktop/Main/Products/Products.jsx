@@ -28,7 +28,7 @@ const Products = () => {
   return (
     <div className={styles.products}>
         <div className={styles.productsContainer+" row m-0 p-0"}>
-            <div className='col-12'>
+            <div className='col-12 mb-md-4'>
                 <div className='row'>
                     {productsImagesTop.map((item, index)=>{
                         return <ProductsItem4 src={item.src} key={index} />

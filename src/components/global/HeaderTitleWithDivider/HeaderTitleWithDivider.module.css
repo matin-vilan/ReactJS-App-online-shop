@@ -1,0 +1,17 @@
+.title{
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.redLine{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 2px;
+    bottom: -1rem;
+    background-color: red;
+}

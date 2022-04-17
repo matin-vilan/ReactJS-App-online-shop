@@ -1,0 +1,96 @@
+.BeautyMagazineItem{
+
+}
+
+.BeautyMagazineItemContainer{
+
+}
+
+.imageContainer{
+    position: relative;
+}
+
+.image{
+
+}
+
+.imageDate , .imageBadge{
+    position: absolute;
+}
+
+.imageDate{
+    top: 1rem;
+    right: 1rem;
+    background-color: #fff;
+    font-size: 1.5rem;
+    padding: .5rem;
+}
+
+.imageBadge{
+    bottom: 0;
+    width: 100%;
+}
+
+.imageBadge span{
+    background-color: red;
+    padding: .3rem .8rem;
+    color: #fff;
+    font-size: .9rem;
+}
+
+.contentTitle{
+    margin: 1rem 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.contentShare{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentShare div{
+    cursor: pointer;;
+}
+
+.contentText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem 0;
+    font-size: 1rem;
+    padding: 0 4rem;
+}
+
+.moreContent{
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+    .contentText{
+        padding: 0 1rem;
+    }
+}
+
+@media only screen and (max-width: 767.9px) {
+    .contentTitle{
+        font-size: 1.3rem;
+    }
+    .contentText{
+        padding: 0 ;
+    }
+}
+
+@media only screen and (max-width: 576.9px) {
+    .contentTitle{
+        font-size: 1rem;
+    }
+    .contentText{
+        padding: 0 ;
+    }
+    .imageDate{
+        font-size: .6rem;
+    }
+}
