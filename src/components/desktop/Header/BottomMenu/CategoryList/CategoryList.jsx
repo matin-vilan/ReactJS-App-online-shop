@@ -18,12 +18,7 @@ const CategoryList = () => {
   const dropDownMenu = hovered ? "show" : "";
 
   return (
-    <div
-      onMouseEnter={handleMenuHoverIn}
-      onMouseLeave={handleMenuHoverOut}
-      className="w-100"
-    >
-      <div className="d-flex pointer align-items-center justify-content-between w-100">
+      <div className={styles.mainCategories + " w-100 d-flex pointer align-items-center justify-content-between w-100"}>
         <div className="dropdownMenu d-flex justify-content-start align-items-center">
           <div className={styles.icon}>
             <Icon.List />
@@ -33,11 +28,8 @@ const CategoryList = () => {
         <div className={styles.dropToggleIcon}>
           <Icon.ChevronDown />
         </div>
+        <DropDownList />
       </div>
-      <div className={styles.dropDownList}>
-        <DropDownList show={dropDownMenu} />
-      </div>
-    </div>
   );
 };
 

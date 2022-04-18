@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Home from "../../layouts/Desktop/Home/Home";
 import styles from "./Desktop.module.css";
+import { useMenu } from '../../hooks/useMenu';
 
 function Desktop() {
   return (

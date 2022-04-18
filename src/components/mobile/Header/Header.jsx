@@ -1,25 +1,8 @@
 import React from "react";
 import styles from "./Header.module.css";
 import SliderMenu from "./ListIconMenu/SliderMenu";
-import { showSliderMenu } from "../../../store/actions/actions";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
 
 function Header() {
-  const dispatch = useDispatch();
-
-  const showSlider = useSelector((state) => state.showSlider);
-
-  const handleShow = () => {
-    dispatch(showSliderMenu(true));
-    console.log("clicked", showSlider, showSliderMenu(true));
-  };
-
-  // const [show, setShow] = useState(false);
-
-  // const handleSliderMenu = () => {
-  //   setShow(!show);
-  // };
 
   return (
     <div className={styles.header}>

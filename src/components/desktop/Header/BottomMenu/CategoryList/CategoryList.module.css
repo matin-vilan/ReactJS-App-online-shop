@@ -20,3 +20,17 @@
     background-color: rgb(255, 255, 255);
     width: 90%;
 }
+.mainCategories{
+   position: relative;
+}
+.mainCategories ul{
+    position: absolute;
+    top:98%;
+    right:0;
+    width:100%;
+    background: #fff;
+    display: none;
+}
+.mainCategories:hover ul{
+    display: block;
+}

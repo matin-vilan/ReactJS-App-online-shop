@@ -1,19 +1,19 @@
-import { MENUS, SHOW_SLIDER } from "../types/types";
+import * as Types from "../types/types";
 
 const initialState = {
-  menus: [],
-  showSlider: [false],
+  menus: null,
 };
 
 export const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case MENUS:
-      return { ...state, menus: action.payload };
-
-    case SHOW_SLIDER:
-      return { ...state, showSlider: action.payload };
+  const {type,payload} = action
+  switch (type) {
+    case Types.MENUS:
+      return {
+        ...state,
+        menus: payload,
+      };
 
     default:
-      break;
+      return state;
   }
 };

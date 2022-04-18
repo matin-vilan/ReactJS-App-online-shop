@@ -12,13 +12,23 @@
     align-items: center;
 }
 
-.menuTitle:hover {
+.menuContainer:hover  .menuTitle {
     color: #c40538;
     transition: all .2s ease;
 }
 
+.menuTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .menuTitle p {
     margin-left: .7rem!important;
+}
+
+.menuTitle svg{
+    color: rgb(207, 207, 207);
 }
 
 .menuDropDownList {
