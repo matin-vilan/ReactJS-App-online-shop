@@ -6,3 +6,10 @@ export const getMenus = (menus) => {
     payload: menus,
   };
 };
+
+export const getPosts = (posts) => {
+  return {
+    type:Types.POSTS,
+    payload: posts
+  }
+};

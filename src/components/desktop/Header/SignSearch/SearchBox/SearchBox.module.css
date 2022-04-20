@@ -1,41 +1,44 @@
 .searchBoxInput {
-    /* width: 20rem; */
-    outline: none;
-    border: 2px solid rgba(199, 199, 199, 0.5);
-    height: 2.8rem;
-    border-radius: 0 5px 5px 0;
-    border-left: none;
-    padding: 0 20px;
+  /* width: 20rem; */
+  border: 2px solid rgba(199, 199, 199, 0.5);
+  height: 2.8rem;
+  border-radius: 0 5px 5px 0;
+  border-left: none;
+  padding: 0 20px;
+}
+
+.searchBoxInput input {
+  outline: none !important;
 }
 
 .searchBoxInput::-webkit-input-placeholder {
-    color: rgba(65, 65, 65, 0.589);
-    font-weight: 400;
+  color: rgba(65, 65, 65, 0.589);
+  font-weight: 400;
 }
 
 .SearchMenuSelectBox {
-    /* width: 10rem; */
-    outline: none;
-    border: 2px solid rgba(199, 199, 199, 0.5);
-    height: 2.8rem;
-    border-left: none;
-    border-radius: unset;
+  /* width: 10rem; */
+  outline: none;
+  border: 2px solid rgba(199, 199, 199, 0.5);
+  height: 2.8rem;
+  border-left: none;
+  border-radius: unset;
 }
 
 .searchBoxIcon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #d60644;
-    color: white;
-    /* width: 3.5rem; */
-    font-size: 1rem;
-    border-radius: 5px 0 0 5px;
-    height: 2.8rem;
-    transition: all .4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d60644;
+  color: white;
+  /* width: 3.5rem; */
+  font-size: 1rem;
+  border-radius: 5px 0 0 5px;
+  height: 2.8rem;
+  transition: all 0.4s ease;
 }
 
 .searchBoxIcon:hover {
-    background-color: #b80037;
-    transition: all .4s ease;
+  background-color: #b80037;
+  transition: all 0.4s ease;
 }

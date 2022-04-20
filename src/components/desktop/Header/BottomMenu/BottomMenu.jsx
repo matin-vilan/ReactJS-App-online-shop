@@ -18,6 +18,7 @@ function BottomMenu() {
             style={{ alignSelf: "center", minHeight: "1.5em" }}
           ></div>
         </div>
+
         <div className="col-7 d-flex align-items-center">
           <MenuList />
         </div>

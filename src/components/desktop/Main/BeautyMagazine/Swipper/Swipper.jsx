@@ -6,51 +6,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import BeautyMagazineItem from "../BeautyMagazineItem/BeautyMagazineItem";
 import { useMediaQuery } from "../../../../../hooks/useMediaQuery";
+import { useSelector } from "react-redux";
+import * as shamsi from 'shamsi-date-converter';
 
-const beutyItemsJson = [
-  {
-    src: "/assets/images/mainImages/beautyMagazine/1.jpg",
-    date: "۰۸ بهمن",
-    badge: "سبک زندگی",
-    title: "انواع کادو برای روز دختر",
-    text: "نمی‌توانید پیدا کنید که از هدیه گرفتن خوشحال نشود! هدیه گرفتن در هر مناسبتی، چه تولد باشد و",
-  },
-  {
-    src: "/assets/images/mainImages/beautyMagazine/2.jpg",
-    date: "۰۹ بهمن",
-    badge: "سبک زندگی",
-    title: "راهنمای خرید کادو شب یلدا",
-    text: "نمی‌توانید پیدا کنید که از هدیه گرفتن خوشحال نشود! هدیه گرفتن در هر مناسبتی، چه تولد باشد و",
-  },
-  {
-    src: "/assets/images/mainImages/beautyMagazine/3.jpg",
-    date: "۱۰ بهمن",
-    badge: "مراقبت و سلامتی",
-    title: "راهنمای خرید بهترین کادو برای دختر",
-    text: "نمی‌توانید پیدا کنید که از هدیه گرفتن خوشحال نشود! هدیه گرفتن در هر مناسبتی، چه تولد باشد و",
-  },
-  {
-    src: "/assets/images/mainImages/beautyMagazine/4.png",
-    date: "۱۱ بهمن",
-    badge: "محصولات بهداشتی",
-    title: "تاثیرات هورمونی بر روی پوست انسان",
-    text: "نمی‌توانید پیدا کنید که از هدیه گرفتن خوشحال نشود! هدیه گرفتن در هر مناسبتی، چه تولد باشد و",
-  },
-  {
-    src: "/assets/images/mainImages/beautyMagazine/1.jpg",
-    date: "۱۲ بهمن",
-    badge: "مراقبت و زیبایی",
-    title: "راهنمای خرید بهترین کادو برای دختر",
-    text: "نمی‌توانید پیدا کنید که از هدیه گرفتن خوشحال نشود! هدیه گرفتن در هر مناسبتی، چه تولد باشد و",
-  },
-  {
-    src: "/assets/images/mainImages/beautyMagazine/2.jpg",
-    date: "۱۳ بهمن",
-    badge: "آرایشی و بهداشتی",
-    title: "تاثیر انواع ژل بر روی موی سر",
-    text: "نمی‌توانید پیدا کنید که از هدیه گرفتن خوشحال نشود! هدیه گرفتن در هر مناسبتی، چه تولد باشد و",
-  },
-];
 
 const Swipper = () => {
   const isMobile = useMediaQuery("(max-width:577px)");
@@ -60,6 +18,9 @@ const Swipper = () => {
 
   const [slides, setSlides] = useState(0);
 
+  const posts = useSelector((state) => state?.posts);
+  console.log(shamsi.gregorianToJalali(1989, 1, 24).join('/'));
+
   useEffect(() => {
     if (isMobile) {
       setSlides(2);
@@ -67,30 +28,30 @@ const Swipper = () => {
       setSlides(2);
     } else if (isDesktop) {
       setSlides(3);
-    } else if(isUltraDesktop){
+    } else if (isUltraDesktop) {
       setSlides(4);
     }
-  }, [isMobile, isTablet, isDesktop,isUltraDesktop]);
+  }, [isMobile, isTablet, isDesktop, isUltraDesktop]);
 
   return (
     <Swiper
       modules={[Navigation]}
       spaceBetween={10}
       slidesPerView={slides}
-      loop={true}
+      // loop={true}
       navigation
       cssMode={true}
     >
-      {beutyItemsJson.map((item, index) => {
+      {posts?.map((item, index) => {
         return (
           <SwiperSlide key={index}>
             <BeautyMagazineItem
-            key={index+1}
-              src={item.src}
-              text={item.text}
-              date={item.date}
-              badge={item.badge}
-              title={item.title}
+              key={index + 1}
+              src={"/assets/images/mainImages/beautyMagazine/1.jpg"}
+              text={item?.excerpt?.rendered}
+              date={shamsi.gregorianToJalali(item.date).join("/")}
+              badge={"item.badge"}
+              title={item?.title?.rendered}
             />
           </SwiperSlide>
         );

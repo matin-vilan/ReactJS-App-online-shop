@@ -1,10 +1,38 @@
 .dropDownItem {
-    list-style: none;
-    padding: .7rem 1.2rem;
-    /* border-bottom: 1px solid rgb(190, 190, 190); */
-    cursor: pointer;
+  list-style: none;
+  padding: 0.7rem 1.2rem;
+  /* border-bottom: 1px solid rgb(190, 190, 190); */
+  cursor: pointer;
+  width: 100%;
 }
 
-.dropDownItem:hover {
-    background-color: aliceblue;
+.test {
+  width: 100%;
+  height: auto;
+  top: 0;
+  right: 100%;
+  z-index: 1000;
+  display: none;
+}
+
+.test ul li{
+  list-style: none;
+  padding: .7rem 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.test ul li:not(:last-child){
+  border-bottom: 1px solid black;
+}
+
+.test ul{
+  padding: 0;
+  top: 0;
+}
+
+.dropDownItemcont:hover .test{
+  display: block!important;
 }

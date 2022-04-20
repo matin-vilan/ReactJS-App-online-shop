@@ -4,7 +4,11 @@ import styles from "./MainSpecialsTimer.module.css";
 
 function MainSpecialsTimer() {
   return (
-    <div className={styles.mainSpecialTimerComponent + " col-12 col-md-4 p-0 m-0 container"}>
+    <div
+      className={
+        styles.mainSpecialTimerComponent + " col-12 col-md-4 p-0 m-0 container"
+      }
+    >
       <div className="specialComponentContainer p-2 d-flex flex-column justify-content-center align-items-center h-100">
         <div className="specialComponentImg">
           <img
@@ -43,6 +47,21 @@ function MainSpecialsTimer() {
               <div className={styles.counter}>5</div>
               <div className={styles.format}>ثانیه</div>
             </div>
+          </div>
+        </div>
+
+        <div className={styles.buy}>
+          <div>
+            <i class="bi bi-cart3"></i>
+          </div>
+          <div>
+            <i class="bi bi-search"></i>
+          </div>
+          <div>
+            <i class="bi bi-arrow-left-right"></i>
+          </div>
+          <div>
+            <i class="bi bi-heart"></i>
           </div>
         </div>
       </div>

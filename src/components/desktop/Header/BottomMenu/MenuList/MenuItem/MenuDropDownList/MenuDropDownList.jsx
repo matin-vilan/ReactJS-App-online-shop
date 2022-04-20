@@ -1,13 +1,13 @@
-import React from 'react';
-import MenuDropDownItem from './MenuDropDownItem/MenuDropDownItem';
-import styles from "./MenuDropDownList.module.css"
+import React from "react";
+import MenuDropDownItem from "./MenuDropDownItem/MenuDropDownItem";
+import styles from "./MenuDropDownList.module.css";
 
-const MenuDropDownList = () => {
-    return (
-        <ul className={styles.MenuDropDownItemContainer}>
-            <MenuDropDownItem />
-        </ul>
-    );
+const MenuDropDownList = ({ items }) => {
+  return (
+    <ul className={styles.MenuDropDownItemContainer}>
+      <MenuDropDownItem items={items} />
+    </ul>
+  );
 };
 
 export default MenuDropDownList;

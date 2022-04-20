@@ -2,6 +2,7 @@ import * as Types from "../types/types";
 
 const initialState = {
   menus: null,
+  posts: null,
 };
 
 export const reducer = (state = initialState, action) => {
@@ -12,6 +13,10 @@ export const reducer = (state = initialState, action) => {
         ...state,
         menus: payload,
       };
+    case Types.POSTS:
+      return{
+        ...state , posts:payload
+      }
 
     default:
       return state;

@@ -3,40 +3,31 @@ import Divider from "../../../../../global/Divider/Divider";
 import DropDownItem from "./DropDownItem/DropDownItem";
 import styles from "./DropDownList.module.css";
 import { useSelector } from "react-redux";
+import { Spinner } from "react-bootstrap";
 
-const DropDownList = ({ show }) => {
+const DropDownList = () => {
   const menus = useSelector((state) => state.menus);
   const categories = menus?.categories;
-  // const data = [
-
-  //     {
-  //         text: "آرایشی و گریم"
-  //     },
-  //     {
-  //         text: "مو"
-  //     },
-  //     {
-  //         text: "پوست"
-  //     },
-  //     {
-  //         text: "بدن"
-  //     },
-  //     {
-  //         text: "عطر"
-  //     },
-  //     {
-  //         text: "بهداشت شخصی"
-  //     }
-  // ]
-
   return (
-      <ul className={styles.dropDownUl}>
-        {categories?.length?categories.map((category) => (
-          <Fragment key={category.id}>
-            <DropDownItem text={category?.title} />
-          </Fragment>
-        )):<div>LOADING ...</div>}
-      </ul>
+    <ul className={styles.dropDownUl}>
+      {categories?.length ? (
+        categories.map((category) => (
+          <div
+            key={category.id}
+            className={
+              styles.dropDownItemContainer +
+              " d-flex justify-content-between align-items-center ps-3"
+            }
+          >
+            <DropDownItem text={category?.title} items={category?.children} />
+          </div>
+        ))
+      ) : (
+        <div className={styles.spinner}>
+          <Spinner animation="grow" variant="secondary" />
+        </div>
+      )}
+    </ul>
   );
 };
 

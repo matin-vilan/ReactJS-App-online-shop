@@ -1,13 +1,17 @@
 import React from "react";
 import MenuItem from "./MenuItem/MenuItem";
 import styles from "./MenuList.module.css";
+import { useSelector } from 'react-redux';
 
-const MenuList = ({ menusTitle }) => {
+const MenuList = () => {
+
+  const state = useSelector(state=>state.menus);
+  const mainMenu = state?.main_menu;
 
   return (
     <div className={styles.menuList + " d-flex h-100"}>
-      {menusTitle?.map((item, index) => {
-        return <MenuItem key={index} text={item.slug} id={item.termId} />;
+      {mainMenu?.map((item) => {
+        return <MenuItem key={item.id} mainMenu={item} text={item?.title} items={item?.children} />;
       })}
     </div>
   );

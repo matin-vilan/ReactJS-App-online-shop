@@ -3,6 +3,20 @@
     border: 1px solid rgb(211, 211, 211);
     margin-bottom: 0;
 }
-.dropDownUl li:not(:last-child){
+
+.spinner{
+    min-height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.dropDownItemContainer{
     border-bottom: 1px solid rgb(211, 211, 211);
+    padding: 0!important;
+}
+
+.dropDownItemContainer:hover{
+    background-color: rgba(173, 173, 173, 0.726);
 }
