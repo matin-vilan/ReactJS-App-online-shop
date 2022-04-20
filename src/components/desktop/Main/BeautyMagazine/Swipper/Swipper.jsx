@@ -7,8 +7,7 @@ import "swiper/css/navigation";
 import BeautyMagazineItem from "../BeautyMagazineItem/BeautyMagazineItem";
 import { useMediaQuery } from "../../../../../hooks/useMediaQuery";
 import { useSelector } from "react-redux";
-import * as shamsi from 'shamsi-date-converter';
-
+import * as shamsi from "shamsi-date-converter";
 
 const Swipper = () => {
   const isMobile = useMediaQuery("(max-width:577px)");
@@ -19,9 +18,8 @@ const Swipper = () => {
   const [slides, setSlides] = useState(0);
 
   const posts = useSelector((state) => state?.posts);
-  console.log(shamsi.gregorianToJalali(1989, 1, 24).join('/'));
 
-  useEffect(() => {
+  const setSlidesSwiper = () => {
     if (isMobile) {
       setSlides(2);
     } else if (isTablet) {
@@ -31,7 +29,11 @@ const Swipper = () => {
     } else if (isUltraDesktop) {
       setSlides(4);
     }
-  }, [isMobile, isTablet, isDesktop, isUltraDesktop]);
+  };
+
+  useEffect(() => {
+    setSlidesSwiper();
+  },[]);
 
   return (
     <Swiper

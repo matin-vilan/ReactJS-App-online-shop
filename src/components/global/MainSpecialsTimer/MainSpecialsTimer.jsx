@@ -52,16 +52,16 @@ function MainSpecialsTimer() {
 
         <div className={styles.buy}>
           <div>
-            <i class="bi bi-cart3"></i>
+            <i className="bi bi-cart3"></i>
           </div>
           <div>
-            <i class="bi bi-search"></i>
+            <i className="bi bi-search"></i>
           </div>
           <div>
-            <i class="bi bi-arrow-left-right"></i>
+            <i className="bi bi-arrow-left-right"></i>
           </div>
           <div>
-            <i class="bi bi-heart"></i>
+            <i className="bi bi-heart"></i>
           </div>
         </div>
       </div>

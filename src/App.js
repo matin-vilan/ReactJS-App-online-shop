@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useEffect } from "react";
+import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import { isMobile } from "react-device-detect";
 import LiteCircular from "./components/global/Spinner/LiteCircular.jsx";

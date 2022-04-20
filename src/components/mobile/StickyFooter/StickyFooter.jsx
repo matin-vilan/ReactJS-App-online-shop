@@ -8,9 +8,9 @@ const StickyFooter = () => {
         <div className='stickyFooterContainer'>
             <div className='row p-0 m-0' style={{direction:"rtl"}}>
                 <StickyFooterItem icon={<i className="bi bi-shop"></i>} title={"فروشگاه"} />
-                <StickyFooterItem icon={<i class="bi bi-heart"></i>} title={"علاقه مندی"} />
-                <StickyFooterItem icon={<i class="bi bi-handbag"></i>} title={"سبد خرید"} />
-                <StickyFooterItem icon={<i class="bi bi-person"></i>} title={"حساب کاربری"} />
+                <StickyFooterItem icon={<i className="bi bi-heart"></i>} title={"علاقه مندی"} />
+                <StickyFooterItem icon={<i className="bi bi-handbag"></i>} title={"سبد خرید"} />
+                <StickyFooterItem icon={<i className="bi bi-person"></i>} title={"حساب کاربری"} />
             </div>
         </div>
     </div>

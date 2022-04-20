@@ -5,15 +5,18 @@ import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./store/store/store";
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import "bootstrap/dist/css/bootstrap.min.css"
-import "./layouts/Desktop/assets/Desktop.css"
-import 'typeface-yekan';
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./layouts/Desktop/assets/Desktop.css";
+import "typeface-yekan";
+import { ChakraProvider } from "@chakra-ui/react";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
+      <ChakraProvider>
         <App />
+      </ChakraProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
