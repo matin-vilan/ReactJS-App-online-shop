@@ -1,6 +1,7 @@
 import { VStack } from "@chakra-ui/react";
 import React from "react";
 import BrandFilter from "./BrandFilter/BrandFilter";
+import ColorFilter from "./ColorFilter/ColorFilter";
 import InventoryFilter from "./InventoryFilter/InventoryFilter";
 import PriceFilter from "./PriceFilter/PriceFilter";
 import ProductCategories from "./ProductCategories/ProductCategories";
@@ -17,6 +18,8 @@ const SideBarStore = () => {
         <ProductCategories />
 
         <BrandFilter />
+
+        <ColorFilter />
 
       </VStack>
     </div>
