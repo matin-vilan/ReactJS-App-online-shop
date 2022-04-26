@@ -11,12 +11,13 @@ import "./layouts/Desktop/assets/Desktop.css";
 import "typeface-yekan";
 import { ChakraProvider } from "@chakra-ui/react";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
+import theme from './theme';
 
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <App />
       </ChakraProvider>
     </Provider>
