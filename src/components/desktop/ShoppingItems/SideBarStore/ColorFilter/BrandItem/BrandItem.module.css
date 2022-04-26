@@ -1,23 +1,15 @@
-.brandItemText , .brandItemImage , .brandItemInventory {
-    transition: all .5s ease;
+.brandItemText,
+.brandItemImage,
+.brandItemInventory {
+  transition: all 0.5s ease;
 }
 
-.brandItem:hover .brandItemText{
-    color: black; 
-    transition: all .5s ease;
+.brandItem:hover .brandItemText {
+  color: black;
+  transition: all 0.5s ease;
 }
 
-.brandItem:hover .brandItemImageBox::after{
-    content: "\f107";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    left: 100%;
-    transition: all .5s ease;
-}
-
-.brandItem:hover .brandItemInventory{
-    background-color: red;
-    transition: all .5s ease;
+.brandItem:hover .brandItemInventory {
+  background-color: red;
+  transition: all 0.5s ease;
 }

@@ -10,6 +10,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./layouts/Desktop/assets/Desktop.css";
 import "typeface-yekan";
 import { ChakraProvider } from "@chakra-ui/react";
+import "../node_modules/font-awesome/css/font-awesome.min.css";
+
 
 ReactDOM.render(
   <React.StrictMode>

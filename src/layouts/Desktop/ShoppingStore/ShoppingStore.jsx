@@ -17,11 +17,12 @@ const ShoppingStore = () => {
           templateColumns="repeat(4, 1fr)"
           gap={8}
           my={16}
+          width={"full"}
         >
-          <GridItem colSpan={1}>
+          <GridItem colSpan={{base:0 , lg:1}} className={"d-lg-block d-none"}>
             <SideBarStore />
           </GridItem>
-          <GridItem border={"1px solid black"} colSpan={3}>
+          <GridItem className="w-100" colSpan={{base:4,lg:3}}>
             <MainStore />
           </GridItem>
         </Grid>

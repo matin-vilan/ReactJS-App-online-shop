@@ -1,14 +1,48 @@
 import React from "react";
-import { Box, Grid, GridItem, Image, Text } from "@chakra-ui/react";
-import styles from "./BrandItem.module.css"
+import {
+  Box,
+  Center,
+  Grid,
+  GridItem,
+  Icon,
+  Image,
+  Text,
+} from "@chakra-ui/react";
+import styles from "./BrandItem.module.css";
+import { BsCheck } from "react-icons/bs";
 
 const BrandItem = ({ text, color, inventory }) => {
   return (
     <>
-      <GridItem w={"100%"} colSpan={1} className={styles.brandItem} cursor={"pointer"}>
+      <GridItem
+        w={"100%"}
+        colSpan={1}
+        sx={{
+          "& .check-icon": {
+            display: "none",
+          },
+          "&:hover .check-icon": {
+            display: "block",
+          },
+        }}
+        cursor={"pointer"}
+      >
         <Grid templateColumns={"repeat(8, 1fr)"}>
-          <GridItem colSpan={"2"} display={"flex"} justifyContent={"center"} className={styles.brandItemImage}>
-            <Box className={styles.brandItemImageBox} position={"relative"} borderRadius={"100%"} p={"1rem"} backgroundColor={color}></Box>
+          <GridItem
+            colSpan={"2"}
+            display={"flex"}
+            justifyContent={"center"}
+            className={styles.brandItemImage}
+          >
+            <Center bg={color} borderRadius="50%" p="8px" w="34px" h="34px">
+              <Icon
+                className="check-icon"
+                bg={color}
+                fontSize="18px"
+                color="white"
+                as={BsCheck}
+              />
+            </Center>
           </GridItem>
           <GridItem
             colSpan={"5"}
@@ -20,7 +54,12 @@ const BrandItem = ({ text, color, inventory }) => {
           >
             <Text>{text}</Text>
           </GridItem>
-          <GridItem colSpan={"1"} display={"flex"} justifyContent={"center"} alignItems={"center"}>
+          <GridItem
+            colSpan={"1"}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+          >
             <Text
               border={"1px solid"}
               borderColor={"blackAlpha.300"}
