@@ -8,25 +8,41 @@ import {
   Text,
   useDisclosure,
   VStack,
+  Button,
+  Grid,
 } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 import { MdCompareArrows } from "react-icons/md";
+import ImageItem from "./ImageItem/ImageItem";
+import ContentItem from "./ContentItem/ContentItem";
+import MoreContent from "./MoreContent/MoreContent";
 
 const MainStoreItem = () => {
-  const { isOpen, onClose , onOpen } = useDisclosure();
+  const { onClose, onOpen, isOpen } = useDisclosure();
 
   return (
     <>
       <GridItem
+        bg={"white"}
         onMouseEnter={onOpen}
         onMouseLeave={onClose}
         w={"full"}
         border={"1px solid"}
         borderColor={"gray.300"}
+        transition={"all .5s ease-out"}
+        sx={{
+          "&:hover": {
+            transform: "scale(1.05,1.04)",
+            transition: "all .3s ease-in",
+          },
+          "&:hover .topCollaps": {
+            top: "-35%!important",
+            transition: "all .2s ease-in",
+          },
+        }}
       >
-        <Box mt={"1rem"}>
-          <Image src="/assets/images/mainImages/dayOffers/comeon-cream-foot.jpg" />
-        </Box>
+        <ImageItem />
+
         <Box
           my={"1rem"}
           display={"flex"}
@@ -34,46 +50,43 @@ const MainStoreItem = () => {
           alignItems={"center"}
         >
           <VStack position={"relative"}>
+            {/* <Collapse in={isOpen} startingHeight={"0"}> */}
+            <Box
+              className="topCollaps"
+              style={{
+                transition: "all .3s ease-out",
+                position: "absolute",
+                display: "flex",
+                width: "100%",
+                padding: ".5rem 0",
+                top: "10%",
+                zIndex: "1",
+                right: "0",
+                justifyContent: "flex-end",
+                alignItems: "center",
+                fontSize: "2rem",
+                backgroundColor: "#fff",
+              }}
+            >
+              <Divider
+                position={"absolute"}
+                top={"0"}
+                color={"blackAlpha.300"}
+              />
+              <Icon as={MdCompareArrows} me={"1rem"} fontWeight={"black"} />
+              <Divider
+                position={"absolute"}
+                bottom={"0"}
+                color={"blackAlpha.300"}
+              />
+            </Box>
+            {/* </Collapse> */}
+
+            <ContentItem />
+
             <Collapse in={isOpen} startingHeight={"0"}>
-              <Box
-                style={{
-                  position: "absolute",
-                  display: "flex",
-                  width: "100%",
-                  padding: ".5rem 0",
-                  top: "-50%",
-                  right:"0",
-                  justifyContent: "flex-end",
-                  alignItems: "center",
-                  fontSize: "2rem",
-                  backgroundColor: "#fff",
-                  // opacity:"0"
-                }}
-              >
-                <Divider
-                  position={"absolute"}
-                  top={"0"}
-                  color={"blackAlpha.300"}
-                />
-                <Icon as={MdCompareArrows} me={"1rem"} fontWeight={"black"} />
-                <Divider
-                  position={"absolute"}
-                  bottom={"0"}
-                  color={"blackAlpha.300"}
-                />
-              </Box>
+              <MoreContent />
             </Collapse>
-            <Box>
-              <Text px={"1rem"} textAlign={"center"}>
-                کرم ضد ترک پا کامان حجم ۳۰۰ میلی لیتر
-              </Text>
-              <Text display={"flex"} justifyContent={"center"} color={"red"} py={"1rem"} fontWeight={"medium"}>
-                ۳۵۰۰۰ تومان
-              </Text>
-            </Box>
-            <Box>
-              this is last box
-            </Box>
           </VStack>
         </Box>
       </GridItem>
