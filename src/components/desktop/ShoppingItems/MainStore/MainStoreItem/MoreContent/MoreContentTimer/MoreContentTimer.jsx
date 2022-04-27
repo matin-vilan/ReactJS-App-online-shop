@@ -12,26 +12,26 @@ const MoreContentTimer = () => {
         >
           <GridItem>
             <Box display={"flex"} flexDirection={"column"}>
-              <Text>۱۳</Text>
-              <Text>روز</Text>
+              <Text textAlign={"center"} fontSize={"xl"} fontWeight={"black"}>۱۳</Text>
+              <Text fontWeight={"light"} textAlign={"center"} color={"shopPage.iconHover"} fontSize={"xx-small"}>روز</Text>
             </Box>
           </GridItem>
           <GridItem>
             <Box display={"flex"} flexDirection={"column"}>
-              <Text>۱۳</Text>
-              <Text>ساعت</Text>
+              <Text textAlign={"center"} fontSize={"xl"} fontWeight={"black"}>۱۳</Text>
+              <Text fontWeight={"light"} textAlign={"center"} color={"shopPage.iconHover"} fontSize={"xx-small"}>ساعت</Text>
             </Box>
           </GridItem>
           <GridItem>
             <Box display={"flex"} flexDirection={"column"}>
-              <Text>۱۳</Text>
-              <Text>دقیقه</Text>
+              <Text textAlign={"center"} fontSize={"xl"} fontWeight={"black"}>۱۳</Text>
+              <Text fontWeight={"light"} textAlign={"center"} color={"shopPage.iconHover"} fontSize={"xx-small"}>دقیقه</Text>
             </Box>
           </GridItem>
           <GridItem>
             <Box display={"flex"} flexDirection={"column"}>
-              <Text>۱۳</Text>
-              <Text>ثانیه</Text>
+              <Text textAlign={"center"} fontSize={"xl"} fontWeight={"black"}>۱۳</Text>
+              <Text fontWeight={"light"} textAlign={"center"} color={"shopPage.iconHover"} fontSize={"xx-small"}>ثانیه</Text>
             </Box>
           </GridItem>
         </Grid>

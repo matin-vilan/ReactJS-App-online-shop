@@ -31,7 +31,7 @@ const SliderMenu = () => {
         <div className={styles.sliderMenu + " position-absolute"}>
           <div className={styles.sliderContainer}>
             <div className={styles.productSearching + " row p-0 m-0"}>
-              <div className="col-10">
+              <div className="col-10 py-3">
                 <input type="text" placeholder="جستجوی محصولات" />
               </div>
               <div className={styles.iconContainer + " col-2"}>

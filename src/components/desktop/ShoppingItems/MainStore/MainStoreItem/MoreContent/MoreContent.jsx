@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Divider } from "@chakra-ui/react";
 import React from "react";
 import MoreContentButtons from "./MoreContentButtons/MoreContentButtons";
 import MoreContentText from "./MoreContentText/MoreContentText";
@@ -24,7 +24,7 @@ const MoreContent = () => {
         <MoreContentText/>
 
         <MoreContentButtons />
-
+        <Divider color={"gray.300"} mb={".3rem"} />
         <MoreContentTimer />
         
       </Box>

@@ -4,18 +4,14 @@ import {
   Divider,
   GridItem,
   Icon,
-  Image,
-  Text,
   useDisclosure,
   VStack,
-  Button,
-  Grid,
 } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
-import { MdCompareArrows } from "react-icons/md";
 import ImageItem from "./ImageItem/ImageItem";
 import ContentItem from "./ContentItem/ContentItem";
 import MoreContent from "./MoreContent/MoreContent";
+import {FaRandom} from "react-icons/fa"
 
 const MainStoreItem = () => {
   const { onClose, onOpen, isOpen } = useDisclosure();
@@ -30,15 +26,28 @@ const MainStoreItem = () => {
         border={"1px solid"}
         borderColor={"gray.300"}
         transition={"all .5s ease-out"}
+        zIndex={"1"}
         sx={{
           "&:hover": {
             transform: "scale(1.05,1.04)",
             transition: "all .3s ease-in",
+            border:"none",
+            boxShadow:" 0rem 0.1rem 1rem 0.1rem #a6a6a6bf",
+            zIndex:'10',
           },
           "&:hover .topCollaps": {
             top: "-35%!important",
             transition: "all .2s ease-in",
           },
+
+          "&:hover .shopImageItem": {
+            transform:"scale(1.15)",
+            transition: "all 1s ease-in",
+            maxWidth:"100%!important"
+          },
+          "&:hover .contentItemContainer":{
+            marginBottom:".5rem!important"
+          }
         }}
       >
         <ImageItem />
@@ -50,7 +59,7 @@ const MainStoreItem = () => {
           alignItems={"center"}
         >
           <VStack position={"relative"}>
-            {/* <Collapse in={isOpen} startingHeight={"0"}> */}
+
             <Box
               className="topCollaps"
               style={{
@@ -73,15 +82,15 @@ const MainStoreItem = () => {
                 top={"0"}
                 color={"blackAlpha.300"}
               />
-              <Icon as={MdCompareArrows} me={"1rem"} fontWeight={"black"} />
+              <Icon as={FaRandom} me={"1rem"} />
               <Divider
                 position={"absolute"}
                 bottom={"0"}
                 color={"blackAlpha.300"}
               />
             </Box>
-            {/* </Collapse> */}
 
+            {/* content of the item here */}
             <ContentItem />
 
             <Collapse in={isOpen} startingHeight={"0"}>

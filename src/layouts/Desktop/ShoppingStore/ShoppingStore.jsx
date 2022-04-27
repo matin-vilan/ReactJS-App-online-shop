@@ -1,10 +1,10 @@
 import React from "react";
 import Footer from "../../../components/desktop/Footer/Footer";
-import Header from "../../../components/desktop/Header/Header";
 import SideBarStore from "../../../components/desktop/ShoppingItems/SideBarStore/SideBarStore";
 import MainStore from "../../../components/desktop/ShoppingItems/MainStore/MainStore";
 import { Container, Grid, GridItem } from "@chakra-ui/react";
 import styles from "./ShoppingStore.module.css";
+import Header from '../../../components/mobile/Header/Header';
 
 const ShoppingStore = () => {
   return (

@@ -7,29 +7,33 @@ import {
   GridItem,
   Icon,
   Select,
+  Divider,
 } from "@chakra-ui/react";
 import {} from "@chakra-ui/react";
 import MainStoreItem from "./MainStoreItem/MainStoreItem";
 import { CgMenuGridR } from "react-icons/cg";
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
+import {FaBars} from "react-icons/fa"
 
 const MainStore = () => {
-  const[gridClick , setGridClick] = useState(false)
-  const handleSmallGridDesign = ()=>{
-    setGridClick(!false)
-  }
-  const handleBigGridDesign = ()=>{
-    setGridClick(!true)
-  }
+  const [gridClick, setGridClick] = useState(false);
+  const handleSmallGridDesign = () => {
+    setGridClick(!false);
+  };
+  const handleBigGridDesign = () => {
+    setGridClick(!true);
+  };
 
   return (
     <div className="w-100">
       <VStack>
         <Box w={"full"}>
-          <Grid templateColumns={"repeat(12, 1fr)"}>
-            <GridItem colSpan={6} display={"flex"} alignItems={"center"}>
+          <Grid
+            templateColumns={"repeat(12, 1fr)"}
+            templateRows={{ base: "repeat(2, 1fr)", lg: "repeat(1, 1fr)" }}
+          >
+            <GridItem colSpan={5} display={"flex"} alignItems={"center"}>
               <Text cursor={"pointer"} color={"gray.500"} pe={"1rem"}>
-                {" "}
                 خانه
               </Text>
               <Text>/</Text>
@@ -37,41 +41,89 @@ const MainStore = () => {
                 فروشگاه
               </Text>
             </GridItem>
+
             <GridItem
               display={"flex"}
-              justifyContent={"space-around"}
+              justifyContent={{ base: "flex-end", lg: "space-around" }}
               alignItems={"center"}
-              colSpan={3}
+              colSpan={{ base: 6, lg: 4 }}
+              rowSpan={{ base: 1, lg: 3 }}
+              marginLeft={"1rem"}
             >
               <Box
                 display={"flex"}
+                justifyContent={{ base: "flex-end", lg: "flex-start" }}
                 sx={{
                   " p:hover ": {
                     color: "black!important",
-                    transition:"all .5s ease"
+                    transition: "all .5s ease",
                   },
                 }}
               >
-                <Text pe={"1rem"}>نمایش :</Text>
-                <Text color={"gray.500"} cursor={"pointer"}>
-                  9
+                <Text color={"gray.500"} pe={"1rem"}>
+                  نمایش :
                 </Text>
-                <Text cursor={"default"} px={".5rem"}>/</Text>
-                <Text color={"gray.500"} cursor={"pointer"}>
-                  24
-                </Text>
-                <Text cursor={"default"} px={".5rem"}>/</Text>
-                <Text color={"gray.500"} cursor={"pointer"}>
-                  36
-                </Text>
+                <Box
+                  color={"gray.500"}
+                  display={"flex"}
+                  className={"d-flex d-lg-none"}
+                >
+                  <Text>۱</Text>
+                  <Text>از</Text>
+                  <Text>۱۱</Text>
+                  <Text>نتیجه</Text>
+                </Box>
+
+                <Box className="d-none d-lg-flex">
+                  <Text color={"gray.500"} cursor={"pointer"}>
+                    9
+                  </Text>
+                  <Text cursor={"default"} px={".5rem"}>
+                    /
+                  </Text>
+                  <Text color={"gray.500"} cursor={"pointer"}>
+                    24
+                  </Text>
+                  <Text cursor={"default"} px={".5rem"}>
+                    /
+                  </Text>
+                  <Text color={"gray.500"} cursor={"pointer"}>
+                    36
+                  </Text>
+                </Box>
               </Box>
-              <Box>
-                <Icon onClick={handleSmallGridDesign} cursor={"pointer"} color={gridClick ?  "black" : "gray.500"} as={CgMenuGridR} />
-                <Icon onClick={handleBigGridDesign} cursor={"pointer"} color={gridClick ? "gray.500" :"black" } as={BsFillGrid3X3GapFill} />
+
+              <Box className="d-none d-lg-block">
+                <Icon
+                  onClick={handleSmallGridDesign}
+                  cursor={"pointer"}
+                  color={gridClick ? "black" : "gray.500"}
+                  as={CgMenuGridR}
+                />
+                <Icon
+                  onClick={handleBigGridDesign}
+                  cursor={"pointer"}
+                  color={gridClick ? "gray.500" : "black"}
+                  as={BsFillGrid3X3GapFill}
+                />
               </Box>
             </GridItem>
+
             <GridItem
-              colSpan={3}
+              colSpan={{ base: 6, lg: 0 }}
+              rowSpan={{base:1 , lg:0}}
+              className={"d-flex d-lg-none"}
+              justifyContent={"flex-start"}
+              alignItems={"center"}
+            >
+              <Icon fontSize={"2xl"} as={FaBars} />
+            </GridItem>
+
+            <GridItem
+              rowSpan={{ base: 1, lg: 2 }}
+              colSpan={{ base: 6, lg: 3 }}
+              display={{ base: "flex", lg: "block" }}
+              justifyContent={"flex-end"}
               sx={{
                 "& div ": {
                   width: "100%",
@@ -83,9 +135,10 @@ const MainStore = () => {
               <Select
                 focusBorderColor={"red.500"}
                 cursor={"pointer"}
-                fontWeight={"black"}
+                fontWeight={{ base: "light", sm: "bold" }}
                 className="selectMainStore"
                 variant={"flushed"}
+                fontSize={{ base: "sm", md: "md" }}
               >
                 <option>مرتب سازی بر اساس آخرین</option>
                 <option>مرتب سازی بر اساس ارزان ترین</option>
