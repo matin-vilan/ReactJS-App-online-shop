@@ -7,7 +7,7 @@ import styles from "./Header.module.css"
 
 const Header = () => {
   return (
-    <div className={styles.header}>
+    <div className={styles.header} style={{direction:"rtl!important"}}>
       <div className="row d-flex flex-column m-0 p-0">
         <TopMenu />
         <Divider />

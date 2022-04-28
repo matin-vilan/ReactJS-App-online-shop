@@ -5,7 +5,7 @@ import SliderMenu from "./ListIconMenu/SliderMenu";
 function Header() {
 
   return (
-    <div className={styles.header}>
+    <div className={styles.header} style={{direction:"rtl!important"}}>
       <div
         id="headerContainer"
         className={

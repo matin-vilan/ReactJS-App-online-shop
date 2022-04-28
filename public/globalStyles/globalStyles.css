@@ -59,6 +59,7 @@
     font-family: "Yekan";
     font-weight: 400;
     box-sizing: border-box;
+    direction: rtl;
 }
 
 p {
