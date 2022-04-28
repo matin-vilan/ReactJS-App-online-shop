@@ -13,7 +13,8 @@ import {} from "@chakra-ui/react";
 import MainStoreItem from "./MainStoreItem/MainStoreItem";
 import { CgMenuGridR } from "react-icons/cg";
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
-import {FaBars} from "react-icons/fa"
+import { FaBars } from "react-icons/fa";
+import { BsArrowDownUp } from "react-icons/bs";
 
 const MainStore = () => {
   const [gridClick, setGridClick] = useState(false);
@@ -30,7 +31,7 @@ const MainStore = () => {
         <Box w={"full"}>
           <Grid
             templateColumns={"repeat(12, 1fr)"}
-            templateRows={{ base: "repeat(2, 1fr)", lg: "repeat(1, 1fr)" }}
+            templateRows={{ base: "repeat(3, 1fr)", lg: "repeat(1, 1fr)" }}
           >
             <GridItem colSpan={5} display={"flex"} alignItems={"center"}>
               <Text cursor={"pointer"} color={"gray.500"} pe={"1rem"}>
@@ -48,7 +49,8 @@ const MainStore = () => {
               alignItems={"center"}
               colSpan={{ base: 6, lg: 4 }}
               rowSpan={{ base: 1, lg: 3 }}
-              marginLeft={"1rem"}
+              marginLeft={{ base: "0", lg: "1rem" }}
+              w={"full"}
             >
               <Box
                 display={"flex"}
@@ -69,6 +71,8 @@ const MainStore = () => {
                   className={"d-flex d-lg-none"}
                 >
                   <Text>۱</Text>
+                  <Text>-</Text>
+                  <Text>۸</Text>
                   <Text>از</Text>
                   <Text>۱۱</Text>
                   <Text>نتیجه</Text>
@@ -110,13 +114,24 @@ const MainStore = () => {
             </GridItem>
 
             <GridItem
+              rowSpan={1}
+              colSpan={12}
+              display={{ base: "block", lg: "none" }}
+            >
+              <Divider />
+            </GridItem>
+
+            <GridItem
               colSpan={{ base: 6, lg: 0 }}
-              rowSpan={{base:1 , lg:0}}
+              rowSpan={{ base: 1, lg: 0 }}
               className={"d-flex d-lg-none"}
               justifyContent={"flex-start"}
               alignItems={"center"}
             >
               <Icon fontSize={"2xl"} as={FaBars} />
+              <Text ps={"1rem"} fontWeight={"black"}>
+                مشاهده فیلتر ها
+              </Text>
             </GridItem>
 
             <GridItem
@@ -124,6 +139,7 @@ const MainStore = () => {
               colSpan={{ base: 6, lg: 3 }}
               display={{ base: "flex", lg: "block" }}
               justifyContent={"flex-end"}
+              mt={"1rem"}
               sx={{
                 "& div ": {
                   width: "100%",
@@ -132,11 +148,18 @@ const MainStore = () => {
                 },
               }}
             >
+              <Icon
+                display={{ base: "block!important", md: "none!important" }}
+                as={BsArrowDownUp}
+                fontSize={"xl"}
+                fontWeight={"black"}
+              />
               <Select
                 focusBorderColor={"red.500"}
                 cursor={"pointer"}
                 fontWeight={{ base: "light", sm: "bold" }}
                 className="selectMainStore"
+                display={{ base: "none!important", md: "block!important" }}
                 variant={"flushed"}
                 fontSize={{ base: "sm", md: "md" }}
               >
