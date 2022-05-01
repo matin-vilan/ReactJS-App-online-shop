@@ -18,7 +18,6 @@ const Swipper = () => {
   const [slides, setSlides] = useState(0);
 
   const posts = useSelector((state) => state?.posts);
-
   const setSlidesSwiper = () => {
     if (isMobile) {
       setSlides(2);
@@ -33,7 +32,7 @@ const Swipper = () => {
 
   useEffect(() => {
     setSlidesSwiper();
-  },[]);
+  }, []);
 
   return (
     <Swiper
@@ -48,6 +47,7 @@ const Swipper = () => {
         return (
           <SwiperSlide key={index}>
             <BeautyMagazineItem
+              id={item.id}
               key={index + 1}
               src={"/assets/images/mainImages/beautyMagazine/1.jpg"}
               text={item?.excerpt?.rendered}

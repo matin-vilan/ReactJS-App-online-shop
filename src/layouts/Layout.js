@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
     console.log(isMobile);
   }, [isMobile]);
   return (
-    <div>
+    <div style={{direction:"rtl"}}>
       <div style={{ direction: "rtl!important" }}>
         {isMobile ? <MobileHeader /> : <DesktopHeader />}
       </div>

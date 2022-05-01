@@ -59,35 +59,39 @@
 }
 
 .dot {
-  width: .7rem;
-  height: .7rem;
+  width: 0.7rem;
+  height: 0.7rem;
   background-color: white;
   border-radius: 50%;
   position: absolute;
   right: -10%;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   z-index: 1;
+  opacity: 0;
+}
+
+.BeautyMagazineItem:hover .dot {
+  transition: all .7s ease;
 }
 
 .BeautyMagazineItem:hover .dot1 {
   transform: translateX(5rem);
   right: 76%;
-  transition: all 1s ease;
+  opacity: 1;
 }
 
 .BeautyMagazineItem:hover .dot2 {
   transform: translateX(5rem);
   right: 72%;
-  transition: all 1s ease;
-  transition-delay: .1s;
+  transition-delay: 0.1s;
+  opacity: 1;
 }
 
 .BeautyMagazineItem:hover .dot3 {
   transform: translateX(5rem);
   right: 68%;
-  transition: all 1s ease;
-  transition-delay: .2s;
-
+  transition-delay: 0.2s;
+  opacity: 1;
 }
 
 .BeautyMagazineItemContainer {

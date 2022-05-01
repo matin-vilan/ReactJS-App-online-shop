@@ -11,15 +11,19 @@ import "./layouts/Desktop/assets/Desktop.css";
 import "typeface-yekan";
 import { ChakraProvider } from "@chakra-ui/react";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
-import theme from './theme';
+import theme from "./theme";
+import { QueryClient, QueryClientProvider } from "react-query";
 
+const queryClient = new QueryClient();
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ChakraProvider theme={theme}>
-        <App />
-      </ChakraProvider>
+      <QueryClientProvider client={queryClient}>
+        <ChakraProvider theme={theme}>
+          <App />
+        </ChakraProvider>
+      </QueryClientProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")

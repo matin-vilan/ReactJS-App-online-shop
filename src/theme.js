@@ -8,9 +8,12 @@ const theme = extendTheme({
   colors: {
     shopPage: {
       price: "#d60644",
-      gray:"rgb(51 51 51 / 65%)",
-      button:"#d60644",
-      iconHover:"#777"
+      gray: "rgb(51 51 51 / 65%)",
+      button: "#d60644",
+      iconHover: "#777",
+    },
+    postPage: {
+      blog: "#e8e8e8",
     },
   },
 });
