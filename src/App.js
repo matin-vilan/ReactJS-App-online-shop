@@ -11,7 +11,7 @@ const Desktop = lazy(() => import("./components/desktop/Desktop.js"));
 const General = lazy(() => import("./General"));
 
 function App() {
-  const isMobile = useMediaQuery("(max-width:768px)");
+  const isMobile = useMediaQuery("(max-width:992px)");
 
   return (
     <BrowserRouter>

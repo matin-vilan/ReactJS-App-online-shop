@@ -1,5 +1,5 @@
 .icon i {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 900;
     color: black;
 }
@@ -16,3 +16,12 @@
 .shoppingItem:hover .shoppingItemContainer .icon i {
     color: rgba(52, 52, 52, 0.396);
 }
+
+@media only screen and (min-width: 1140px) {
+    .icon i {
+        font-size: 1.3rem!important;
+    }
+    .icon .text p{
+        font-size: 1.5rem!important;
+    }
+  }

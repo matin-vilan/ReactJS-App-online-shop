@@ -1,5 +1,4 @@
-import React, { Fragment } from "react";
-import Divider from "../../../../../global/Divider/Divider";
+import React from "react";
 import DropDownItem from "./DropDownItem/DropDownItem";
 import styles from "./DropDownList.module.css";
 import { useSelector } from "react-redux";

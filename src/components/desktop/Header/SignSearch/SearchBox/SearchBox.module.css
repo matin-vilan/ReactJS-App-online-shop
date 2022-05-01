@@ -1,5 +1,5 @@
 .searchBoxInput {
-  /* width: 20rem; */
+  width: 100%;
   border: 2px solid rgba(199, 199, 199, 0.5);
   height: 2.8rem;
   border-radius: 0 5px 5px 0;
@@ -7,9 +7,10 @@
   padding: 0 20px;
 }
 
-.searchBoxInput input {
+.searchBoxInput {
   outline: none !important;
 }
+
 
 .searchBoxInput::-webkit-input-placeholder {
   color: rgba(65, 65, 65, 0.589);
@@ -17,7 +18,7 @@
 }
 
 .SearchMenuSelectBox {
-  /* width: 10rem; */
+  width: 100%;
   outline: none;
   border: 2px solid rgba(199, 199, 199, 0.5);
   height: 2.8rem;
@@ -42,3 +43,4 @@
   background-color: #b80037;
   transition: all 0.4s ease;
 }
+

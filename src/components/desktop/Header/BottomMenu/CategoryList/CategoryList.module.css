@@ -23,14 +23,16 @@
 .mainCategories{
    position: relative;
 }
-.mainCategories ul{
+.dropDownList{
     position: absolute;
     top:98%;
     right:0;
     width:100%;
     background: #fff;
-    display: none;
+    transition: all .2s ease-in-out;
+    opacity: 0;
 }
-.mainCategories:hover ul{
-    display: block;
+.mainCategories:hover .dropDownList{
+    opacity: 1;
+    transition: all .2s ease-in-out;
 }

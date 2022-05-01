@@ -25,7 +25,7 @@
 }
 
 .test ul li:not(:last-child){
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #8080801f;
 }
 
 .test ul{

@@ -33,8 +33,15 @@
 
 .menuDropDownList {
     position: absolute;
-    top: 2.6rem;
+    opacity: 0;
+    top: 100%;
     background-color: rgb(255, 255, 255);
-    width: 200%;
+    width: 250%;
     height: auto;
+    transition: all .3s ease;
+}
+
+.menuContainer:hover .menuDropDownList{
+    opacity: 1!important;
+    transition: all .3s ease;
 }

@@ -62,6 +62,10 @@
     direction: rtl;
 }
 
+input{
+  outline: none!important;
+}
+
 p {
     margin: 0 !important;
 }

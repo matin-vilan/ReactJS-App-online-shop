@@ -10,7 +10,7 @@ const MobileFooter = lazy(() =>
 const DesktopFooter = lazy(() => import("../components/desktop/Footer/Footer"));
 
 const Layout = ({ children }) => {
-  const isMobile = useMediaQuery("(max-width:768px)");
+  const isMobile = useMediaQuery("(max-width:992px)");
   useEffect(() => {
     console.log(isMobile);
   }, [isMobile]);
@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
       <div>
         <DesktopFooter />
       </div>
-      <div>{isMobile && <MobileFooter />}</div>
+      <>{isMobile && <MobileFooter />}</>
     </div>
   );
 };

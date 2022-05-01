@@ -1,11 +1,11 @@
 .sliderImage img {
     border-radius: 2rem;
-    /* opacity: 0; */
+    opacity: 0;
     transition: all ease-in-out 0.4s;
 }
 
 .active {
-    /* opacity:1!important; */
+    opacity:1!important;
     display: block!important;
     transition: all .3s ease;
 }

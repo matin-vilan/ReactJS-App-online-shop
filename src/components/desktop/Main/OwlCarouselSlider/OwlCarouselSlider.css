@@ -83,8 +83,52 @@
     align-items: centers;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .sliderImages {
     z-index: 1;
+}
+
+.slideShowDots{
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    /* height: 3rem; */
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    border-radius: 0 0 2rem 2rem;
+}
+
+
+.slideShowDot{
+    height: 3rem;
+    width:25%;
+    background-color: rgba(122, 122, 122, 0.724);
+    flex-direction: row;
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+    color:white;
+    font-weight: 900;
+}
+
+.slideShowDotActive{
+    height: 3rem;
+    width:25%;
+    padding: 1.5rem 0;
+    color:white;
+    font-weight: 900;
+    flex-direction: row;
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(34, 34, 34, 0.837);
 }

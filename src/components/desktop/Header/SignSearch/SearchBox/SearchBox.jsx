@@ -6,7 +6,7 @@ const SearchBox = () => {
     <>
           <div className="col-md-8 col-8 p-0 m-0">
             <input
-              className={"form-control " + styles.searchBoxInput}
+              className={styles.searchBoxInput}
               type="text"
               // id="floatingTextarea"
               placeholder="جستجوی محصولات"
@@ -17,17 +17,17 @@ const SearchBox = () => {
 
           <div className="col-md-3 col-3 p-0 m-0">
             <select
-              className={"form-select pointer " + styles.SearchMenuSelectBox}
+              className={" pointer text-muted px-1 " + styles.SearchMenuSelectBox}
               aria-label="Default select example"
             >
-              <option defaultValue={"selected"}>انتخاب کنید</option>
+              <option defaultValue={"selected"}>انتخاب دسته بندی</option>
               <option value="1">آرایشی بهداشتی</option>
               <option value="2">رژ گونه</option>
             </select>
           </div>
 
           <div className={"col-md-1 col-1 p-0 m-0 pointer " + styles.searchBoxIcon}>
-            <i className="bi bi-search"></i>
+            <i className="bi bi-search "></i>
           </div>
         
 

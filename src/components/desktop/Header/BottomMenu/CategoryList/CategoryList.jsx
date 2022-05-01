@@ -16,12 +16,15 @@ const CategoryList = () => {
         <div className={styles.icon}>
           <Icon.List />
         </div>
-          <div className={styles.listTitle}>دسته بندی کالاها</div>
+        <div className={styles.listTitle}>دسته بندی کالاها</div>
       </div>
       <div className={styles.dropToggleIcon}>
         <Icon.ChevronDown />
       </div>
-      <DropDownList />
+
+      <div className={styles.dropDownList}>
+        <DropDownList />
+      </div>
     </div>
   );
 };

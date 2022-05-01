@@ -2,7 +2,8 @@ import React from "react";
 import TopMenuNav from "./TopMenuNav/TopMenuNav";
 import TopMenuSocialMedia from "./TopMenuSocialMedia/TopMenuSocialMedia";
 import "./TopMenu.css";
-import VerticalDivider from "../../../global/Divider/VerticalDivider/VerticalDivider";
+import { Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 function TopMenu() {
   return (
@@ -10,7 +11,11 @@ function TopMenu() {
       <div className="row p-0 m-0 ">
         <div className="menuContainer col-md-2 d-flex justify-content-center align-items-center position-relative">
           <div className="topMenu-title">
-            <p className="pointer">فروشگاه اینترنتی وودمارت</p>
+            <Link to={"/"}>
+              <Text className="pointer" fontSize={{ lg: "x-small", xl: "sm" }}>
+                فروشگاه اینترنتی وودمارت
+              </Text>
+            </Link>
           </div>
           <div
             className="vr me-4"
