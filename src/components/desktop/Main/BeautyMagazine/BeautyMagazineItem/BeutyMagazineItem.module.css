@@ -1,104 +1,194 @@
-.BeautyMagazineItem{
-    width: 100%;
-    height: 100%;
+.BeautyMagazineItem {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 4px rgb(0 0 0 / 12%);
+  margin-bottom: 2rem;
+  transition: all 0.4s ease;
 }
 
-.BeautyMagazineItemContainer{
-    width: 100%;
-    height: 100%;
+.BeautyMagazineItem:hover {
+  box-shadow: 0 0 9px rgb(0 0 0 / 20%) !important;
+  transition: all 0.4s ease;
 }
 
-.imageContainer{
-    position: relative;
+.BeautyMagazineItem:hover .image img {
+  transform: scale(1.08, 1.08);
+  transition: all 0.3s ease;
 }
 
-.image{
+.image {
+  transition: all 0.5s ease;
+}
+
+.BeautyMagazineItem .image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.642);
+  opacity: 0;
+  transition: all 0.5s ease;
+  transform: scale(1.08, 1.08);
+}
+
+.BeautyMagazineItem:hover .image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.642);
+  opacity: 1;
+  transition: all 0.5s ease;
+  transform: scale(1.08, 1.08);
+}
+
+.dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.dot {
+  width: .7rem;
+  height: .7rem;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  right: -10%;
+  transition: all .3s ease;
+  z-index: 1;
+}
+
+.BeautyMagazineItem:hover .dot1 {
+  transform: translateX(5rem);
+  right: 76%;
+  transition: all 1s ease;
+}
+
+.BeautyMagazineItem:hover .dot2 {
+  transform: translateX(5rem);
+  right: 72%;
+  transition: all 1s ease;
+  transition-delay: .1s;
+}
+
+.BeautyMagazineItem:hover .dot3 {
+  transform: translateX(5rem);
+  right: 68%;
+  transition: all 1s ease;
+  transition-delay: .2s;
 
 }
 
-.imageDate , .imageBadge{
-    position: absolute;
+.BeautyMagazineItemContainer {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  transition: all 0.3s ease;
 }
 
-.imageDate{
-    top: 1rem;
-    right: 1rem;
-    background-color: #fff;
-    font-size: .8rem;
-    padding: .5rem;
+.imageContainer {
+  position: relative;
 }
 
-.imageBadge{
-    bottom: 0;
-    width: 100%;
+.image img {
+  transition: all 0.3s ease;
 }
 
-.imageBadge span{
-    background-color: red;
-    padding: .3rem .8rem;
-    color: #fff;
-    font-size: .9rem;
+.imageDate,
+.imageBadge {
+  position: absolute;
 }
 
-.contentTitle{
-    margin: 1rem 0;
-    font-size: 1.3rem;
-    font-weight: 700;
+.imageDate {
+  top: 1rem;
+  right: 1rem;
+  background-color: #fff;
+  font-size: 0.8rem;
+  padding: 0.5rem;
 }
 
-.contentShare{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.imageBadge {
+  bottom: 0;
+  width: 100%;
 }
 
-.contentShare div{
-    cursor: pointer;;
+.imageBadge span {
+  background-color: red;
+  padding: 0.3rem 0.8rem;
+  color: #fff;
+  font-size: 0.9rem;
 }
 
-.contentText{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: .5rem 0;
-    font-size: 1rem;
-    padding: 0 4rem;
-    overflow-y: auto;
+.contentTitle {
+  margin: 1rem 0;
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
-.contentText span{
-    overflow-y: auto;
-    width: 100%;
+.contentShare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.moreContent{
-    margin-bottom: 1.5rem;
-    cursor: pointer;
+.contentShare div {
+  cursor: pointer;
+}
+
+.contentText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  padding: 0 4rem;
+  overflow-y: auto;
+}
+
+.contentText span {
+  overflow-y: auto;
+  width: 100%;
+}
+
+.moreContent {
+  margin-bottom: 1.5rem;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
-    .contentText{
-        padding: 0 1rem;
-    }
+  .contentText {
+    padding: 0 1rem;
+  }
 }
 
 @media only screen and (max-width: 767.9px) {
-    .contentTitle{
-        font-size: 1.3rem;
-    }
-    .contentText{
-        padding: 0 ;
-    }
+  .contentTitle {
+    font-size: 1.3rem;
+  }
+  .contentText {
+    padding: 0;
+  }
 }
 
 @media only screen and (max-width: 576.9px) {
-    .contentTitle{
-        font-size: 1rem;
-    }
-    .contentText{
-        padding: 0 ;
-    }
-    .imageDate{
-        font-size: .6rem;
-    }
+  .contentTitle {
+    font-size: 1rem;
+  }
+  .contentText {
+    padding: 0;
+  }
+  .imageDate {
+    font-size: 0.6rem;
+  }
 }
