@@ -5,7 +5,7 @@ import SidebarPostDetailes from "./SidebarPostDetailes";
 import { usePost } from '../../../hooks/usePost';
 import { useQuery } from 'react-query';
 
-const PostDetails = ({id}) => {
+const PostDetailsContainer = ({id}) => {
 
   const { getPost } = usePost();
 
@@ -44,4 +44,4 @@ const PostDetails = ({id}) => {
   );
 };
 
-export default PostDetails;
+export default PostDetailsContainer;
