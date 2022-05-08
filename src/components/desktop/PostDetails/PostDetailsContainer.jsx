@@ -1,12 +1,11 @@
 import React from "react";
-import { Box, Text } from '@chakra-ui/react';
-import MainPostDetailes from './MainPostDetails';
+import { Box, Container, Grid, GridItem, Text } from "@chakra-ui/react";
+import MainPostDetailes from "./MainPostDetails";
 import SidebarPostDetailes from "./SidebarPostDetailes";
-import { usePost } from '../../../hooks/usePost';
-import { useQuery } from 'react-query';
+import { usePost } from "../../../hooks/usePost";
+import { useQuery } from "react-query";
 
-const PostDetailsContainer = ({id}) => {
-
+const PostDetailsContainer = ({ id }) => {
   const { getPost } = usePost();
 
   const { isLoading, data } = useQuery(["post", id], getPost);
@@ -21,7 +20,7 @@ const PostDetailsContainer = ({id}) => {
         alignItems={"center"}
         bg={"postPage.blog"}
       >
-        <Text fontSize={"4xl"} fontWeight={"black"}>
+        <Text fontSize={"7xl"} fontWeight={"black"}>
           وبلاگ
         </Text>
         <Box display={"flex"}>
@@ -36,10 +35,18 @@ const PostDetailsContainer = ({id}) => {
           </Text>
         </Box>
       </Box>
-      <Box className="postDetailesMainAndSide">
-        <MainPostDetailes />
-        <SidebarPostDetailes />
-      </Box>
+      <Container maxW={"container.2xl"}>
+        <Box className="postDetailesMainAndSide" display={"flex"} w={"full"}>
+          <Grid templateColumns="repeat(4, 1fr)" w={"full"} marginTop={"3rem"}>
+            <GridItem colSpan={3}>
+              <MainPostDetailes id={id} data={data} />
+            </GridItem>
+            <GridItem colSpan={1} display={{ base: "none", md: "block" }}>
+              <SidebarPostDetailes />
+            </GridItem>
+          </Grid>
+        </Box>
+      </Container>
     </div>
   );
 };

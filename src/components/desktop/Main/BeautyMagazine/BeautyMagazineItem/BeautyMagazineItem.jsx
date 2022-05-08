@@ -1,11 +1,9 @@
 import Parser from "html-react-parser";
 import React from "react";
 import styles from "./BeutyMagazineItem.module.css";
-import { Link } from 'react-router-dom';
 
 const BeautyMagazineItem = ({ id ,text, src, badge, title, date }) => {
   return (
-    <Link to={`/post/${id}`}>
       <div className={styles.BeautyMagazineItem}>
         <div className={styles.BeautyMagazineItemContainer}>
           <div className={styles.imageContainer}>
@@ -46,7 +44,6 @@ const BeautyMagazineItem = ({ id ,text, src, badge, title, date }) => {
           </div>
         </div>
       </div>
-    </Link>
   );
 };
 

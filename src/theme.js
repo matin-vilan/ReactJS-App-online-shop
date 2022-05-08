@@ -14,6 +14,14 @@ const theme = extendTheme({
     },
     postPage: {
       blog: "#e8e8e8",
+      inputBorder:"rgba(0,0,0,0.105)",
+      searchIconColor:"#777",
+      searchIconHoverColor:"#333",
+      fontColor:"#333",
+      titleBackground:"rgba(125, 125, 125, 0.15)",
+      textColor:"#333333",
+      categoryTextColor:"#bbb",
+      
     },
   },
 });

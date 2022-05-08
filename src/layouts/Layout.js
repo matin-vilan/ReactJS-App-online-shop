@@ -11,11 +11,9 @@ const DesktopFooter = lazy(() => import("../components/desktop/Footer/Footer"));
 
 const Layout = ({ children }) => {
   const isMobile = useMediaQuery("(max-width:992px)");
-  useEffect(() => {
-    console.log(isMobile);
-  }, [isMobile]);
+  useEffect(() => {}, [isMobile]);
   return (
-    <div style={{direction:"rtl"}}>
+    <div style={{ direction: "rtl" }}>
       <div style={{ direction: "rtl!important" }}>
         {isMobile ? <MobileHeader /> : <DesktopHeader />}
       </div>

@@ -8,8 +8,10 @@ import BeautyMagazineItem from "../BeautyMagazineItem/BeautyMagazineItem";
 import { useMediaQuery } from "../../../../../hooks/useMediaQuery";
 import { useSelector } from "react-redux";
 import * as shamsi from "shamsi-date-converter";
+import { Link } from "react-router-dom";
 
 const Swipper = () => {
+
   const isMobile = useMediaQuery("(max-width:577px)");
   const isTablet = useMediaQuery("(max-width:767.99px)");
   const isDesktop = useMediaQuery("(max-width:992px)");
@@ -34,6 +36,7 @@ const Swipper = () => {
     setSlidesSwiper();
   }, []);
 
+
   return (
     <Swiper
       modules={[Navigation]}
@@ -46,15 +49,16 @@ const Swipper = () => {
       {posts?.map((item, index) => {
         return (
           <SwiperSlide key={index}>
-            <BeautyMagazineItem
-              id={item.id}
-              key={index + 1}
-              src={"/assets/images/mainImages/beautyMagazine/1.jpg"}
-              text={item?.excerpt?.rendered}
-              date={shamsi.gregorianToJalali(item.date).join("/")}
-              badge={"item.badge"}
-              title={item?.title?.rendered}
-            />
+            <Link key={index + 1} to={`/post/${item.id}`} state={{ item }}>
+              <BeautyMagazineItem
+                id={item.id}
+                src={"/assets/images/mainImages/beautyMagazine/1.jpg"}
+                text={item?.excerpt?.rendered}
+                date={shamsi.gregorianToJalali(item.date).join("/")}
+                badge={"item.badge"}
+                title={item?.title?.rendered}
+              />
+            </Link>
           </SwiperSlide>
         );
       })}
