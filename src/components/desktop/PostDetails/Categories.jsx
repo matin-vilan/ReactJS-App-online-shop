@@ -1,5 +1,4 @@
 import React from "react";
-import SideBarBox from "./SideBarBox/SideBarBox";
 import { Text } from "@chakra-ui/react";
 
 const jsonCategories = [

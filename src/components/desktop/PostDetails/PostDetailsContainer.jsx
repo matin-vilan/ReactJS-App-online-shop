@@ -39,7 +39,7 @@ const PostDetailsContainer = ({ id }) => {
         <Box className="postDetailesMainAndSide" display={"flex"} w={"full"}>
           <Grid templateColumns="repeat(4, 1fr)" w={"full"} marginTop={"3rem"}>
             <GridItem colSpan={3}>
-              <MainPostDetailes id={id} data={data} />
+              <MainPostDetailes id={id} data={data} isLoading={isLoading} />
             </GridItem>
             <GridItem colSpan={1} display={{ base: "none", md: "block" }}>
               <SidebarPostDetailes />

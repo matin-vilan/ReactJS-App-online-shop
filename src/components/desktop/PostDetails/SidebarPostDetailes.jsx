@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Input, Text, VStack } from "@chakra-ui/react";
+import { Box, Input, Skeleton, Stack, Text, VStack } from "@chakra-ui/react";
 import { Icon } from "@chakra-ui/react";
 import { BsSearch } from "react-icons/bs";
 import SideBarBox from "./SideBarBox/SideBarBox";
@@ -8,7 +8,6 @@ import { useQuery } from "react-query";
 import Categories from "./Categories";
 
 const SidebarPostDetailes = () => {
-
   const { fetchPosts } = usePosts();
   const { isLoading, data } = useQuery("post", fetchPosts);
 
@@ -41,17 +40,25 @@ const SidebarPostDetailes = () => {
         </Box>
       </SideBarBox>
       <SideBarBox title={"نوشته های تازه"}>
-        {isLoading && <div>loading</div>} 
+        {isLoading && (
+          <Box marginTop={"1rem"}>
+            <Stack spacing={"1rem"}>
+              <Skeleton w={"70%"} height=".5rem" />
+              <Skeleton w={"70%"} height=".5rem" />
+              <Skeleton w={"70%"} height=".5rem" />
+            </Stack>
+          </Box>
+        )}
         {data?.data?.map((item, index) => {
           return (
             <React.Fragment key={index}>
-                <Text
-                  color={"postPage.textColor"}
-                  fontWeight={"medium"}
-                  marginTop={"1rem!important"}
-                >
-                  {item?.title?.rendered}
-                </Text>
+              <Text
+                color={"postPage.textColor"}
+                fontWeight={"medium"}
+                marginTop={"1rem!important"}
+              >
+                {item?.title?.rendered}
+              </Text>
             </React.Fragment>
           );
         })}

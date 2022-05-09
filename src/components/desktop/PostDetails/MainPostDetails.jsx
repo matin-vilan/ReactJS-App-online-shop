@@ -1,14 +1,24 @@
-import { Box, Divider, Image, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Divider,
+  HStack,
+  Icon,
+  Image,
+  Skeleton,
+  Stack,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import React from "react";
 import { Badge } from "@chakra-ui/react";
 import Parser from "html-react-parser";
+import { RiTelegramLine } from "react-icons/ri";
+import { FaLinkedinIn } from "react-icons/fa";
+import { ImPinterest2 } from "react-icons/im";
+import { BsTwitter } from "react-icons/bs";
+import { FiFacebook } from "react-icons/fi";
 
-const MainPostDetailes = ({ id , data }) => {
-  // const { getPost } = usePost();
-  // const { isLoading, data } = useQuery(["post", id], getPost);
-
-  console.log(data);
-
+const MainPostDetailes = ({ id, data, isLoading }) => {
   return (
     <div>
       <VStack gap={"1rem"}>
@@ -36,13 +46,45 @@ const MainPostDetailes = ({ id , data }) => {
           <Image src="/assets/images/mainImages/beautyMagazine/1.jpg"></Image>
         </Box>
         <Box w={"full"} color={"gray.500"}>
-          <Text>{Parser(data?.data.excerpt.rendered)}</Text>
+          <Text>
+            {isLoading && (
+              <Box>
+                <Stack spacing={".6rem"}>
+                  <Skeleton height=".6rem" />
+                  <Skeleton height=".6rem" />
+                  <Skeleton height=".6rem" />
+                  <Skeleton height=".6rem" />
+                  <Skeleton height=".6rem" />
+                  <Skeleton height=".6rem" w={"50%"} />
+                </Stack>
+              </Box>
+            )}
+            {data && Parser(data?.data?.content?.rendered)}
+          </Text>
         </Box>
       </VStack>
-      <Divider marginTop={"3rem"} color={"gray.400"}/>
-      <VStack>
-        
-      </VStack>
+      <Divider margin={"3rem 0"} color={"gray.400"} />
+      <HStack
+        display={"flex"}
+        justifyContent={"center"}
+        sx={{ direction: "ltr" }}
+      >
+        <Box backgroundColor={"red"} margin={"0!important"} m={"0 1rem!important"} >
+          <Icon fontSize={"2rem"} as={RiTelegramLine} />
+        </Box>
+        <Box backgroundColor={"red"} margin={"0!important"} m={"0 .1rem!important"} >
+          <Icon fontSize={"2rem"} as={FaLinkedinIn} />
+        </Box>
+        <Box backgroundColor={"red"} margin={"0!important"} m={"0 .1rem!important"} >
+          <Icon fontSize={"2rem"} as={ImPinterest2} />
+        </Box>
+        <Box backgroundColor={"red"} margin={"0!important"} m={"0 .1rem!important"} >
+          <Icon fontSize={"2rem"} as={BsTwitter} />
+        </Box>
+        <Box backgroundColor={"red"} margin={"0!important"} m={"0 .1rem!important"} >
+          <Icon fontSize={"2rem"} as={FiFacebook} />
+        </Box>
+      </HStack>
     </div>
   );
 };
