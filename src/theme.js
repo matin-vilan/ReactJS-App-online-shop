@@ -14,14 +14,20 @@ const theme = extendTheme({
     },
     postPage: {
       blog: "#e8e8e8",
-      inputBorder:"rgba(0,0,0,0.105)",
-      searchIconColor:"#777",
-      searchIconHoverColor:"#333",
-      fontColor:"#333",
-      titleBackground:"rgba(125, 125, 125, 0.15)",
-      textColor:"#333333",
-      categoryTextColor:"#bbb",
-      
+      inputBorder: "rgba(0,0,0,0.105)",
+      searchIconColor: "#777",
+      searchIconHoverColor: "#333",
+      fontColor: "#333",
+      titleBackground: "rgba(125, 125, 125, 0.15)",
+      textColor: "#333333",
+      categoryTextColor: "#bbb",
+    },
+    socialMedia: {
+      telegram: "#37AEE2",
+      linkedin: "#0274B3",
+      pinterest: "#CB2027",
+      twitter: "#37AEE2",
+      facebook: "#365493",
     },
   },
 });

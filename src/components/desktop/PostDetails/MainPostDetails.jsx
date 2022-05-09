@@ -1,6 +1,8 @@
+import React from "react";
 import {
   Box,
   Divider,
+  Flex,
   HStack,
   Icon,
   Image,
@@ -9,7 +11,6 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import React from "react";
 import { Badge } from "@chakra-ui/react";
 import Parser from "html-react-parser";
 import { RiTelegramLine } from "react-icons/ri";
@@ -64,27 +65,28 @@ const MainPostDetailes = ({ id, data, isLoading }) => {
         </Box>
       </VStack>
       <Divider margin={"3rem 0"} color={"gray.400"} />
-      <HStack
-        display={"flex"}
-        justifyContent={"center"}
+      <Flex
+        w={"230px"}
+        mx={"auto"}
+        justifyContent={"space-evenly"}
         sx={{ direction: "ltr" }}
       >
-        <Box backgroundColor={"red"} margin={"0!important"} m={"0 1rem!important"} >
-          <Icon fontSize={"2rem"} as={RiTelegramLine} />
+        <Box bg={"socailMedia.telegram"} borderRadius={"50%"} padding={".4rem"}>
+          <Icon fontSize={"1.5rem"} as={RiTelegramLine} color={"white"} />
         </Box>
-        <Box backgroundColor={"red"} margin={"0!important"} m={"0 .1rem!important"} >
-          <Icon fontSize={"2rem"} as={FaLinkedinIn} />
+        <Box bg={"socailMedia.linkedin"} borderRadius={"50%"} padding={".4rem"}>
+          <Icon fontSize={"1.5rem"} as={FaLinkedinIn} />
         </Box>
-        <Box backgroundColor={"red"} margin={"0!important"} m={"0 .1rem!important"} >
-          <Icon fontSize={"2rem"} as={ImPinterest2} />
+        <Box bg={"socailMedia.pinterest"} borderRadius={"50%"} padding={".4rem"}>
+          <Icon fontSize={"1.5rem"} as={ImPinterest2} />
         </Box>
-        <Box backgroundColor={"red"} margin={"0!important"} m={"0 .1rem!important"} >
-          <Icon fontSize={"2rem"} as={BsTwitter} />
+        <Box bg={"socailMedia.twitter"} borderRadius={"50%"} padding={".4rem"}>
+          <Icon fontSize={"1.5rem"} as={BsTwitter} />
         </Box>
-        <Box backgroundColor={"red"} margin={"0!important"} m={"0 .1rem!important"} >
-          <Icon fontSize={"2rem"} as={FiFacebook} />
+        <Box bg={"socialMedia.facebook"} borderRadius={"50%"} padding={".4rem"}>
+          <Icon fontSize={"1.5rem"} as={FiFacebook} />
         </Box>
-      </HStack>
+      </Flex>
     </div>
   );
 };
