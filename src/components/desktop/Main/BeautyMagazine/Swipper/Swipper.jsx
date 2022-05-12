@@ -8,18 +8,24 @@ import BeautyMagazineItem from "../BeautyMagazineItem/BeautyMagazineItem";
 import { useMediaQuery } from "../../../../../hooks/useMediaQuery";
 import { useSelector } from "react-redux";
 import * as shamsi from "shamsi-date-converter";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { Box, Skeleton } from "@chakra-ui/react";
+import BeutyMagazineSwiperSkeleton from "../../../../global/Skeleton/BeutyMagazinSwiper/ BeutyMagazineSwiperSkeleton";
 
 const Swipper = () => {
-
   const isMobile = useMediaQuery("(max-width:577px)");
   const isTablet = useMediaQuery("(max-width:767.99px)");
   const isDesktop = useMediaQuery("(max-width:992px)");
   const isUltraDesktop = useMediaQuery("(min-width:992.1px)");
 
+  const navigate = useNavigate();
+
   const [slides, setSlides] = useState(0);
+  const [isLoaing, setIsLoading] = useState(false);
 
   const posts = useSelector((state) => state?.posts);
+  // posts ? setIsLoading(false) : setIsLoading(true);
+
   const setSlidesSwiper = () => {
     if (isMobile) {
       setSlides(2);
@@ -34,8 +40,8 @@ const Swipper = () => {
 
   useEffect(() => {
     setSlidesSwiper();
-  }, []);
-
+    posts ? setIsLoading(false) : setIsLoading(true);
+  }, [posts, slides]);
 
   return (
     <Swiper
@@ -46,10 +52,17 @@ const Swipper = () => {
       navigation
       cssMode={true}
     >
+      {isLoaing && <BeutyMagazineSwiperSkeleton />}
       {posts?.map((item, index) => {
         return (
           <SwiperSlide key={index}>
-            <Link key={index + 1} to={`/post/${item.id}`} state={{ item }}>
+            <Box
+              onClick={() => navigate(`/post/${item.id}`)}
+              style={{ cursor: "pointer" }}
+              id="RouterNavLink"
+              key={index}
+              state={{ item }}
+            >
               <BeautyMagazineItem
                 id={item.id}
                 src={"/assets/images/mainImages/beautyMagazine/1.jpg"}
@@ -58,7 +71,7 @@ const Swipper = () => {
                 badge={"item.badge"}
                 title={item?.title?.rendered}
               />
-            </Link>
+            </Box>
           </SwiperSlide>
         );
       })}

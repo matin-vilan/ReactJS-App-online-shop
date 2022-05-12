@@ -2,10 +2,10 @@ import React from "react";
 import { Box, Input, Skeleton, Stack, Text, VStack } from "@chakra-ui/react";
 import { Icon } from "@chakra-ui/react";
 import { BsSearch } from "react-icons/bs";
-import SideBarBox from "./SideBarBox/SideBarBox";
+import SideBarBox from "./SideBarComponents/SideBarBox/SideBarBox";
 import { usePosts } from "../../../hooks/usePosts";
 import { useQuery } from "react-query";
-import Categories from "./Categories";
+import Categories from "./SideBarComponents/Categories";
 
 const SidebarPostDetailes = () => {
   const { fetchPosts } = usePosts();

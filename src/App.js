@@ -21,13 +21,13 @@ function App() {
         <General>
           <Routes>
             <Route element={<Layout />}>
+              <Route path="post/:id" element={<PostDetails />} />
+              <Route path="/shop" element={<ShoppingStore />} />
               {isMobile ? (
                 <Route path="/" element={<Mobile />} />
               ) : (
                 <Route path="/" element={<Desktop />} />
               )}
-              <Route path="/shop" element={<ShoppingStore />} />
-              <Route path="/post/:id" element={<PostDetails />} />
             </Route>
           </Routes>
           <ReactQueryDevtools initialIsOpen={false} />

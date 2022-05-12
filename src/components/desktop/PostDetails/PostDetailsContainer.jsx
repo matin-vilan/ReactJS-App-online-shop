@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Container, Grid, GridItem, Text } from "@chakra-ui/react";
 import MainPostDetailes from "./MainPostDetails";
 import SidebarPostDetailes from "./SidebarPostDetailes";
@@ -9,6 +9,10 @@ const PostDetailsContainer = ({ id }) => {
   const { getPost } = usePost();
 
   const { isLoading, data } = useQuery(["post", id], getPost);
+
+  useEffect(()=>{
+    window.scroll(0,0);
+  },[])
 
   return (
     <div className="postDetailesContainer">

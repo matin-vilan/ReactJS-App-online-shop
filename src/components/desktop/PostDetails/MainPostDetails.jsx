@@ -1,28 +1,14 @@
 import React from "react";
-import {
-  Box,
-  Divider,
-  Flex,
-  HStack,
-  Icon,
-  Image,
-  Skeleton,
-  Stack,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Divider, Image, Text, VStack } from "@chakra-ui/react";
 import { Badge } from "@chakra-ui/react";
 import Parser from "html-react-parser";
-import { RiTelegramLine } from "react-icons/ri";
-import { FaLinkedinIn } from "react-icons/fa";
-import { ImPinterest2 } from "react-icons/im";
-import { BsTwitter } from "react-icons/bs";
-import { FiFacebook } from "react-icons/fi";
+import SocialMediaIcons from "./MainComponents/SocialMediaIcons";
+import PostDetailsSkeleton from "../../global/Skeleton/PostDetailsSkeleton/PostDetailsSkeleton";
 
 const MainPostDetailes = ({ id, data, isLoading }) => {
   return (
-    <div>
-      <VStack gap={"1rem"}>
+    <Box>
+      <VStack gap={"1rem"} pl={"1rem"}>
         <Box w={"full"} justifyContent={"start"} display={"flex"}>
           <Badge fontSize={"md"} colorScheme={"red"} variant="subtle">
             سبک زندگی
@@ -47,47 +33,15 @@ const MainPostDetailes = ({ id, data, isLoading }) => {
           <Image src="/assets/images/mainImages/beautyMagazine/1.jpg"></Image>
         </Box>
         <Box w={"full"} color={"gray.500"}>
-          <Text>
-            {isLoading && (
-              <Box>
-                <Stack spacing={".6rem"}>
-                  <Skeleton height=".6rem" />
-                  <Skeleton height=".6rem" />
-                  <Skeleton height=".6rem" />
-                  <Skeleton height=".6rem" />
-                  <Skeleton height=".6rem" />
-                  <Skeleton height=".6rem" w={"50%"} />
-                </Stack>
-              </Box>
-            )}
+          <Box>
+            {isLoading && <PostDetailsSkeleton />}
             {data && Parser(data?.data?.content?.rendered)}
-          </Text>
+          </Box>
         </Box>
       </VStack>
       <Divider margin={"3rem 0"} color={"gray.400"} />
-      <Flex
-        w={"230px"}
-        mx={"auto"}
-        justifyContent={"space-evenly"}
-        sx={{ direction: "ltr" }}
-      >
-        <Box bg={"socailMedia.telegram"} borderRadius={"50%"} padding={".4rem"}>
-          <Icon fontSize={"1.5rem"} as={RiTelegramLine} color={"white"} />
-        </Box>
-        <Box bg={"socailMedia.linkedin"} borderRadius={"50%"} padding={".4rem"}>
-          <Icon fontSize={"1.5rem"} as={FaLinkedinIn} />
-        </Box>
-        <Box bg={"socailMedia.pinterest"} borderRadius={"50%"} padding={".4rem"}>
-          <Icon fontSize={"1.5rem"} as={ImPinterest2} />
-        </Box>
-        <Box bg={"socailMedia.twitter"} borderRadius={"50%"} padding={".4rem"}>
-          <Icon fontSize={"1.5rem"} as={BsTwitter} />
-        </Box>
-        <Box bg={"socialMedia.facebook"} borderRadius={"50%"} padding={".4rem"}>
-          <Icon fontSize={"1.5rem"} as={FiFacebook} />
-        </Box>
-      </Flex>
-    </div>
+      <SocialMediaIcons />
+    </Box>
   );
 };
 
