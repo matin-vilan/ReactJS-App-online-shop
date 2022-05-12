@@ -9,25 +9,25 @@ import { FiFacebook } from "react-icons/fi";
 const SocialMediaIcons = () => {
   return (
     <Flex
-      w={"230px"}
+      w={"250px"}
       mx={"auto"}
       justifyContent={"space-evenly"}
       sx={{ direction: "ltr" }}
     >
-      <Box bg={"socailMedia.telegram"} borderRadius={"50%"} padding={".4rem"}>
-        <Icon fontSize={"1.5rem"} as={RiTelegramLine} color={"white"} />
+      <Box bg={"socialMedia.telegram"} borderRadius={"50%"} padding={".7rem"}>
+        <Icon fontSize={"1.4rem"} as={RiTelegramLine} color={"white"} />
       </Box>
-      <Box bg={"socailMedia.linkedin"} borderRadius={"50%"} padding={".4rem"}>
-        <Icon fontSize={"1.5rem"} as={FaLinkedinIn} />
+      <Box bg={"socialMedia.linkedin"} borderRadius={"50%"} padding={".7rem"}>
+        <Icon fontSize={"1.4rem"} as={FaLinkedinIn} color={"white"} />
       </Box>
-      <Box bg={"socailMedia.pinterest"} borderRadius={"50%"} padding={".4rem"}>
-        <Icon fontSize={"1.5rem"} as={ImPinterest2} />
+      <Box bg={"socialMedia.pinterest"} borderRadius={"50%"} padding={".7rem"}>
+        <Icon fontSize={"1.4rem"} as={ImPinterest2} color={"white"} />
       </Box>
-      <Box bg={"socailMedia.twitter"} borderRadius={"50%"} padding={".4rem"}>
-        <Icon fontSize={"1.5rem"} as={BsTwitter} />
+      <Box bg={"socialMedia.twitter"} borderRadius={"50%"} padding={".7rem"}>
+        <Icon fontSize={"1.4rem"} as={BsTwitter} color={"white"} />
       </Box>
-      <Box bg={"socialMedia.facebook"} borderRadius={"50%"} padding={".4rem"}>
-        <Icon fontSize={"1.5rem"} as={FiFacebook} />
+      <Box bg={"socialMedia.facebook"} borderRadius={"50%"} padding={".7rem"}>
+        <Icon fontSize={"1.4rem"} as={FiFacebook} color={"white"} />
       </Box>
     </Flex>
   );

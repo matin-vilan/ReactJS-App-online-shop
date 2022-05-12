@@ -1,0 +1,21 @@
+@keyframes iconHover {
+    0% {transform:translateX(0);}
+    25% {transform:translateX(-.3rem);}
+    50% {transform:translateX(.3rem);}
+    100% {transform:translateX(0);}
+}
+
+.nextIcon{
+    transition: all .2s ease;
+}
+
+.newest:hover .nextIcon{
+    color: red!important;
+    border-color: red!important;
+    transition: all .2s ease;
+    animation-name: iconHover;
+    animation-duration: 1.5s;
+    animation-delay: .3s;
+    animation-iteration-count: infinite;
+}
+

@@ -4,6 +4,8 @@ import { Badge } from "@chakra-ui/react";
 import Parser from "html-react-parser";
 import SocialMediaIcons from "./MainComponents/SocialMediaIcons";
 import PostDetailsSkeleton from "../../global/Skeleton/PostDetailsSkeleton/PostDetailsSkeleton";
+import NextPrevPage from "./MainComponents/NextPrevPage";
+import Comment from "./Comment/Comment";
 
 const MainPostDetailes = ({ id, data, isLoading }) => {
   return (
@@ -41,6 +43,9 @@ const MainPostDetailes = ({ id, data, isLoading }) => {
       </VStack>
       <Divider margin={"3rem 0"} color={"gray.400"} />
       <SocialMediaIcons />
+      <NextPrevPage />
+      <Divider my={"3rem"} color={"gray.400"} />
+      <Comment />
     </Box>
   );
 };
