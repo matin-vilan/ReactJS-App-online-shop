@@ -6,6 +6,9 @@ const theme = extendTheme({
   },
 
   colors: {
+    all:{
+      red:"#d60644"
+    },
     shopPage: {
       price: "#d60644",
       gray: "rgb(51 51 51 / 65%)",

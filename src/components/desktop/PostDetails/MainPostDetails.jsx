@@ -10,7 +10,7 @@ import Comment from "./Comment/Comment";
 const MainPostDetailes = ({ id, data, isLoading }) => {
   return (
     <Box>
-      <VStack gap={"1rem"} pl={"1rem"}>
+      <VStack gap={"1rem"} pl={{base:0,md:"1rem"}}>
         <Box w={"full"} justifyContent={"start"} display={"flex"}>
           <Badge fontSize={"md"} colorScheme={"red"} variant="subtle">
             سبک زندگی
@@ -44,7 +44,7 @@ const MainPostDetailes = ({ id, data, isLoading }) => {
       <Divider margin={"3rem 0"} color={"gray.400"} />
       <SocialMediaIcons />
       <NextPrevPage />
-      <Divider my={"3rem"} color={"gray.400"} />
+      <Divider my={{base:"1rem",md:"3rem"}} color={"gray.400"} />
       <Comment />
     </Box>
   );

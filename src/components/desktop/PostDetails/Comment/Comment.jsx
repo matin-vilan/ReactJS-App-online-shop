@@ -1,5 +1,13 @@
 import React from "react";
-import { Box, Icon, Input, Text, Textarea } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Checkbox,
+  Icon,
+  Input,
+  Text,
+  Textarea,
+} from "@chakra-ui/react";
 import { FaStarOfLife } from "react-icons/fa";
 
 const Comment = () => {
@@ -46,9 +54,17 @@ const Comment = () => {
         </Box>
       </Box>
 
-      <Box display={"flex"} w={"full"} justifyContent={"space-between"} >
+      <Box
+        display={"flex"}
+        flexDirection={{ base: "column", md: "row" }}
+        w={"full"}
+        justifyContent={"space-between"}
+      >
         {/* name input====================== */}
-        <Box w={"calc(95%/3)"}>
+        <Box
+          w={{ base: "full", md: "calc(95%/3)" }}
+          mb={{ base: "1rem", md: "0" }}
+        >
           <Box display={"flex"}>
             <Text>نام</Text>
             <Icon
@@ -70,15 +86,18 @@ const Comment = () => {
         </Box>
 
         {/* email input====================== */}
-        <Box w={"calc(95%/3)"}>
+        <Box
+          w={{ base: "full", md: "calc(95%/3)" }}
+          mb={{ base: "1rem", md: "0" }}
+        >
           <Box display={"flex"}>
             <Text>ایمیل</Text>
-            <Icon
+            {/* <Icon
               as={FaStarOfLife}
               fontSize={".5rem"}
               color={"red"}
               mr={".2rem"}
-            />
+            /> */}
           </Box>
           <Box>
             <Input
@@ -94,9 +113,9 @@ const Comment = () => {
 
         {/* website input======================= */}
 
-        <Box w={"calc(95%/3)"}>
+        <Box w={{ base: "full", md: "calc(95%/3)" }}>
           <Box display={"flex"}>
-            <Text>ایمیل</Text>
+            <Text>وبسایت</Text>
             <Icon
               as={FaStarOfLife}
               fontSize={".5rem"}
@@ -115,6 +134,23 @@ const Comment = () => {
             />
           </Box>
         </Box>
+        {/* checkbox =========================== */}
+      </Box>
+      <Box my={"2rem"}>
+        <Checkbox className="chekboxComment">
+          ذخیره نام، ایمیل و وبسایت من در مرورگر برای زمانی که دوباره دیدگاهی
+          می‌نویسم.
+        </Checkbox>
+      </Box>
+      <Box>
+        <Button
+          colorScheme={"red"}
+          borderRadius={"none"}
+          backgroundColor={"all.red"}
+          color={"white"}
+        >
+          فرستادن دیدگاه
+        </Button>
       </Box>
     </Box>
   );

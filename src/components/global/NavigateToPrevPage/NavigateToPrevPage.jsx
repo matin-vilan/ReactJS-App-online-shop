@@ -14,12 +14,14 @@ const NavigateToPrevPage = () => {
       <Box display={"flex"} alignItems={"end"} flexDirection={"column"}>
         <Text
           mb={"1rem"}
-          color={"postPage.categoryTextColor"}
+          color={{base:"black",md:"postPage.categoryTextColor"}}
           fontWeight={"bold"}
         >
           قدیمی تر
         </Text>
-        <Text fontSize={".9rem"}>راهنمای خرید بهترین کادو برای روز دختر</Text>
+        <Text fontSize={".9rem"} display={{ base: "none", md: "block" }}>
+          راهنمای خرید بهترین کادو برای روز دختر
+        </Text>
       </Box>
       <Box
         display={"flex"}

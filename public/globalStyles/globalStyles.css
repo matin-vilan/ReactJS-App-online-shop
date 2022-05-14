@@ -74,3 +74,8 @@ p {
     cursor: pointer;
 }
 
+.chakra-checkbox__control{
+  box-shadow: unset!important;
+}
+
+

@@ -11,7 +11,7 @@ const MenuList = () => {
   return (
     <div className={styles.menuList + " d-flex h-100"}>
       {mainMenu?.map((item) => {
-        return <MenuItem key={item.id} mainMenu={item} text={item?.title} items={item?.children} />;
+        return <MenuItem key={item.id} url={item.url} mainMenu={item} text={item?.title} items={item?.children} />;
       })}
     </div>
   );

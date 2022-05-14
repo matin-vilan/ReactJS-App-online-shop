@@ -3,9 +3,8 @@ import styles from "./Header.module.css";
 import SliderMenu from "./ListIconMenu/SliderMenu";
 
 function Header() {
-
   return (
-    <div className={styles.header} style={{direction:"rtl!important"}}>
+    <div className={styles.header} style={{ direction: "rtl!important" }}>
       <div
         id="headerContainer"
         className={
@@ -13,14 +12,12 @@ function Header() {
           " row m-0 p-0 px-2 d-flex justify-content-around"
         }
       >
-        <div
-          className="menuIcon col-4 d-flex justify-content-start align-items-center fs-4 pointer"
-        >
+        <div className="menuIcon col-2 d-flex justify-content-start align-items-center fs-4 pointer">
           <SliderMenu />
         </div>
-        <div className="logo col-4 d-flex justify-content-center align-items-center poointer">
+        <div className="logo col-5 d-flex justify-content-center align-items-center poointer">
           <img
-            src="./assets/images/topMenuLogo.png"
+            src="/assets/images/topMenuLogo.png"
             alt="Logo"
             className="img-fluid"
           />
