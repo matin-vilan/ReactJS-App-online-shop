@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import {
   VStack,
   Box,
@@ -15,6 +15,9 @@ import { CgMenuGridR } from "react-icons/cg";
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
 import { BsArrowDownUp } from "react-icons/bs";
+import { useQuery } from "react-query";
+import { useProducts } from "../../../../hooks/useProducts";
+import ShoppingPageItems from "../../../global/Skeleton/ShoppingPageItemSkeleton/ShoppingPageItemSkeleton";
 
 const MainStore = () => {
   const [gridClick, setGridClick] = useState(false);
@@ -24,6 +27,9 @@ const MainStore = () => {
   const handleBigGridDesign = () => {
     setGridClick(!true);
   };
+
+  const { fetchAllProducts } = useProducts();
+  const { isLoading, data } = useQuery("products", fetchAllProducts);
 
   return (
     <div className="w-100">
@@ -181,13 +187,23 @@ const MainStore = () => {
               lg: "repeat(4, 1fr)",
             }}
           >
-            <MainStoreItem />
-            <MainStoreItem />
-            <MainStoreItem />
-            <MainStoreItem />
-            <MainStoreItem />
-            <MainStoreItem />
-            <MainStoreItem />
+            {isLoading && (
+              <Fragment>
+                <ShoppingPageItems />
+                <ShoppingPageItems />
+                <ShoppingPageItems />
+                <ShoppingPageItems />
+                <ShoppingPageItems />
+                <ShoppingPageItems />
+                <ShoppingPageItems />
+                <ShoppingPageItems />
+                <ShoppingPageItems />
+
+              </Fragment>
+            )}
+            {data?.data?.map((item, index) => {
+              return <MainStoreItem key={index} productDetails={item} />;
+            })}
           </Grid>
         </Box>
       </VStack>

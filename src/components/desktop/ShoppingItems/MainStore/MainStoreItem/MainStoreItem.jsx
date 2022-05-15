@@ -11,11 +11,11 @@ import { Box } from "@chakra-ui/react";
 import ImageItem from "./ImageItem/ImageItem";
 import ContentItem from "./ContentItem/ContentItem";
 import MoreContent from "./MoreContent/MoreContent";
-import {FaRandom} from "react-icons/fa"
+import { FaRandom } from "react-icons/fa";
 
-const MainStoreItem = () => {
+const MainStoreItem = ({ productDetails }) => {
   const { onClose, onOpen, isOpen } = useDisclosure();
-
+  console.log(productDetails);
   return (
     <>
       <GridItem
@@ -31,9 +31,9 @@ const MainStoreItem = () => {
           "&:hover": {
             transform: "scale(1.05,1.04)",
             transition: "all .3s ease-in",
-            border:"none",
-            boxShadow:" 0rem 0.1rem 1rem 0.1rem #a6a6a6bf",
-            zIndex:'10',
+            border: "none",
+            boxShadow: " 0rem 0.1rem 1rem 0.1rem #a6a6a6bf",
+            zIndex: "10",
           },
           "&:hover .topCollaps": {
             top: "-35%!important",
@@ -41,13 +41,13 @@ const MainStoreItem = () => {
           },
 
           "&:hover .shopImageItem": {
-            transform:"scale(1.15)",
+            transform: "scale(1.15)",
             transition: "all 1s ease-in",
-            maxWidth:"100%!important"
+            maxWidth: "100%!important",
           },
-          "&:hover .contentItemContainer":{
-            marginBottom:".5rem!important"
-          }
+          "&:hover .contentItemContainer": {
+            marginBottom: ".5rem!important",
+          },
         }}
       >
         <ImageItem />
@@ -59,7 +59,6 @@ const MainStoreItem = () => {
           alignItems={"center"}
         >
           <VStack position={"relative"}>
-
             <Box
               className="topCollaps"
               style={{
@@ -91,7 +90,7 @@ const MainStoreItem = () => {
             </Box>
 
             {/* content of the item here */}
-            <ContentItem />
+            <ContentItem title={productDetails.title} />
 
             <Collapse in={isOpen} startingHeight={"0"}>
               <MoreContent />

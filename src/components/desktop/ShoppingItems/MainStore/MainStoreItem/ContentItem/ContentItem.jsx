@@ -1,12 +1,12 @@
 import { Box, Text } from "@chakra-ui/react";
 import React from "react";
 
-const ContentItem = () => {
+const ContentItem = ({ title }) => {
   return (
     <>
       <Box bg={"white"} zIndex={"2"} className={"contentItemContainer"}>
         <Text px={"1rem"} textAlign={"center"}>
-          کرم ضد ترک پا کامان حجم ۳۰۰ میلی لیتر
+          {title?.rendered}
         </Text>
         <Text
           display={"flex"}
