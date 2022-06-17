@@ -4,7 +4,7 @@ import React from "react";
 const MoreContentTimer = () => {
   return (
     <>
-      <Box w={"full"} pb={".5rem"}>
+      <Box w={"full"} pb={"1rem"}>
         <Grid
           templateColumns={"repeat(4,1fr)"}
           display={"flex"}
@@ -12,26 +12,62 @@ const MoreContentTimer = () => {
         >
           <GridItem>
             <Box display={"flex"} flexDirection={"column"}>
-              <Text textAlign={"center"} fontSize={"xl"} fontWeight={"black"}>۱۳</Text>
-              <Text fontWeight={"light"} textAlign={"center"} color={"shopPage.iconHover"} fontSize={"xx-small"}>روز</Text>
+              <Text textAlign={"center"} fontSize={"xl"} fontWeight={"black"}>
+                ۱۳
+              </Text>
+              <Text
+                fontWeight={"light"}
+                textAlign={"center"}
+                color={"shopPage.iconHover"}
+                fontSize={"xx-small"}
+              >
+                روز
+              </Text>
             </Box>
           </GridItem>
           <GridItem>
             <Box display={"flex"} flexDirection={"column"}>
-              <Text textAlign={"center"} fontSize={"xl"} fontWeight={"black"}>۱۳</Text>
-              <Text fontWeight={"light"} textAlign={"center"} color={"shopPage.iconHover"} fontSize={"xx-small"}>ساعت</Text>
+              <Text textAlign={"center"} fontSize={"xl"} fontWeight={"black"}>
+                ۱۳
+              </Text>
+              <Text
+                fontWeight={"light"}
+                textAlign={"center"}
+                color={"shopPage.iconHover"}
+                fontSize={"xx-small"}
+              >
+                ساعت
+              </Text>
             </Box>
           </GridItem>
           <GridItem>
             <Box display={"flex"} flexDirection={"column"}>
-              <Text textAlign={"center"} fontSize={"xl"} fontWeight={"black"}>۱۳</Text>
-              <Text fontWeight={"light"} textAlign={"center"} color={"shopPage.iconHover"} fontSize={"xx-small"}>دقیقه</Text>
+              <Text textAlign={"center"} fontSize={"xl"} fontWeight={"black"}>
+                ۱۳
+              </Text>
+              <Text
+                fontWeight={"light"}
+                textAlign={"center"}
+                color={"shopPage.iconHover"}
+                fontSize={"xx-small"}
+              >
+                دقیقه
+              </Text>
             </Box>
           </GridItem>
           <GridItem>
             <Box display={"flex"} flexDirection={"column"}>
-              <Text textAlign={"center"} fontSize={"xl"} fontWeight={"black"}>۱۳</Text>
-              <Text fontWeight={"light"} textAlign={"center"} color={"shopPage.iconHover"} fontSize={"xx-small"}>ثانیه</Text>
+              <Text textAlign={"center"} fontSize={"xl"} fontWeight={"black"}>
+                ۱۳
+              </Text>
+              <Text
+                fontWeight={"light"}
+                textAlign={"center"}
+                color={"shopPage.iconHover"}
+                fontSize={"xx-small"}
+              >
+                ثانیه
+              </Text>
             </Box>
           </GridItem>
         </Grid>

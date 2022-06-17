@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import {
   VStack,
   Box,
@@ -18,6 +18,7 @@ import { BsArrowDownUp } from "react-icons/bs";
 import { useQuery } from "react-query";
 import { useProducts } from "../../../../hooks/useProducts";
 import ShoppingPageItems from "../../../global/Skeleton/ShoppingPageItemSkeleton/ShoppingPageItemSkeleton";
+import axios from "../../../../utils/axios";
 
 const MainStore = () => {
   const [gridClick, setGridClick] = useState(false);
@@ -198,7 +199,6 @@ const MainStore = () => {
                 <ShoppingPageItems />
                 <ShoppingPageItems />
                 <ShoppingPageItems />
-
               </Fragment>
             )}
             {data?.data?.map((item, index) => {

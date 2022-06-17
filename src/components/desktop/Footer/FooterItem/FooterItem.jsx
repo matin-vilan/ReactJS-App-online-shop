@@ -9,7 +9,7 @@ const FooterItem = ({headTitle, items}) => {
                 <div>
                   <ul>
                       {items.map((item, index)=>{
-                          return <li key={index+1}><p key={index}>{item}</p></li>
+                          return <li key={index+1} className={"pointer"}><p key={index}>{item}</p></li>
                       })}
                   </ul>
                 </div>

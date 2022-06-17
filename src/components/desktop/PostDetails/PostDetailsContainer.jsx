@@ -23,7 +23,7 @@ const PostDetailsContainer = ({ id }) => {
   }, []);
 
   return (
-    <div maxW={"container.xl"} className="postDetailesContainer">
+    <Box maxW={"container.xl"} className="postDetailesContainer">
       <Box
         py={"3rem"}
         display={"flex"}
@@ -65,7 +65,7 @@ const PostDetailsContainer = ({ id }) => {
       <Divider my={"2rem"} color={"gray.300"} />
       <LastDiscount />
       <Divider my={"2rem"} color={"gray.300"} />
-    </div>
+    </Box>
   );
 };
 

@@ -4,7 +4,7 @@ import React from "react";
 const ContentItem = ({ title }) => {
   return (
     <>
-      <Box bg={"white"} zIndex={"2"} className={"contentItemContainer"}>
+      <Box bg={"white"} zIndex={"2"} className={"contentItemContainer"} width={"full"}>
         <Text px={"1rem"} textAlign={"center"}>
           {title?.rendered}
         </Text>

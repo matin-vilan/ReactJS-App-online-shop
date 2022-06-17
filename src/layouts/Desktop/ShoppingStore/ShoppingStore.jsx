@@ -4,6 +4,7 @@ import MainStore from "../../../components/desktop/ShoppingItems/MainStore/MainS
 import { Container, Grid, GridItem } from "@chakra-ui/react";
 
 const ShoppingStore = () => {
+
   return (
     <div className="shoppingStore" style={{ direction: "rtl" }}>
       <Container maxW="container.2xl">

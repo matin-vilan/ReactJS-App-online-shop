@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Collapse,
   Divider,
@@ -15,10 +15,12 @@ import { FaRandom } from "react-icons/fa";
 
 const MainStoreItem = ({ productDetails }) => {
   const { onClose, onOpen, isOpen } = useDisclosure();
-  console.log(productDetails);
+
+  // console.log(productDetails);
   return (
     <>
       <GridItem
+        cursor={"pointer"}
         bg={"white"}
         onMouseEnter={onOpen}
         onMouseLeave={onClose}
@@ -50,7 +52,7 @@ const MainStoreItem = ({ productDetails }) => {
           },
         }}
       >
-        <ImageItem />
+        <ImageItem image={productDetails?.featured_media} />
 
         <Box
           my={"1rem"}
@@ -58,7 +60,7 @@ const MainStoreItem = ({ productDetails }) => {
           justifyContent={"center"}
           alignItems={"center"}
         >
-          <VStack position={"relative"}>
+          <VStack position={"relative"} width={"full"}>
             <Box
               className="topCollaps"
               style={{
