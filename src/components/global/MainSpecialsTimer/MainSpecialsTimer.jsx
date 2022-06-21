@@ -9,10 +9,10 @@ function MainSpecialsTimer() {
         styles.mainSpecialTimerComponent + " col-12 col-md-4 p-0 m-0 container"
       }
     >
-      <div className="specialComponentContainer p-2 d-flex flex-column justify-content-center align-items-center h-100">
+      <div className="specialComponentContainer d-flex flex-column justify-content-center align-items-center h-100">
         <div className="specialComponentImg">
           <img
-            src="./assets/images/mainImages/specialOffers/flormar.jpg"
+            src="/assets/images/mainImages/specialOffers/flormar.jpg"
             alt="special_image_flormar"
             className="img-fluid"
           />
