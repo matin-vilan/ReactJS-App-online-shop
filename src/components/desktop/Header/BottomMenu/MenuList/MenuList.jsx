@@ -12,7 +12,7 @@ const MenuList = () => {
   useEffect(() => {
     state ? setIsLoading(false) : setIsLoading(true);
   }, [mainMenu]);
-  console.log(isLoading);
+
   return (
     <div className={styles.menuList + " d-flex h-100"}>
       {isLoading && (
