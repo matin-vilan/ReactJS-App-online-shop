@@ -12,7 +12,7 @@ function MainSpecialsTimer() {
       <div className="specialComponentContainer d-flex flex-column justify-content-center align-items-center h-100">
         <div className="specialComponentImg">
           <img
-            src="/assets/images/mainImages/specialOffers/flormar.jpg"
+            src="/assets/images/mainImages/dayOffers/comeon-cream-foot.jpg"
             alt="special_image_flormar"
             className="img-fluid"
           />
