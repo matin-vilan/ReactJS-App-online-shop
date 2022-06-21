@@ -21,6 +21,9 @@ const MoreContent = () => {
           backgroundColor: "white",
           boxShadow: "0 0 10px rgb(0 0 0 / 15%)",
         }}
+        sx={{
+          
+        }}
       >
         <MoreContentText />
 
