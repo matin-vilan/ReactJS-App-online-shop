@@ -13,7 +13,6 @@ function Home() {
   };
   useEffect(() => {
     fecthCat();
-    console.log("hi");
   }, []);
   return (
     <div>
